@@ -138,7 +138,8 @@ output LVDS-1 subpixel none
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+s layout default
     bindsym $mod+w layout tabbed
     bindsym $mod+d layout toggle split
 
