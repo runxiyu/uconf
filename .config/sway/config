@@ -26,13 +26,12 @@ output LVDS-1 subpixel none
 
 input "1:1:AT_Translated_Set_2_keyboard" {
 	xkb_layout "gb"
-	# xkb_layout "gbcapsshift"
-	# xkb_options "custom:caps_lshift"
 }
 
 input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	tap disabled
 	natural_scroll enabled
+	xkb_layout "uscaps"
 }
 
 bindsym $mod+Return exec $term
