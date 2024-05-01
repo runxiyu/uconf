@@ -11,7 +11,7 @@ set $term foot
 set $menu fuzzel
 
 # output * bg /usr/share/wallpapers/Autumn/contents/images/1920x1080.jpg fill
-output eDP-1 resolution 2560x1600 position 0,0 scale 1.5
+output eDP-1 resolution 2560x1600 position 0,0 scale 1.5 bg ~/misc/bg.png fill
 
 ### Idle configuration
 # Example configuration:
