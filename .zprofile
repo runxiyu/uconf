@@ -41,6 +41,7 @@ export QT_QPA_PLATFORM=wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_USE_XINPUT2="1"
+export GDK_BACKEND="wayland"
 
 [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && setsid shortcuts >/dev/null 2>&1
 
