@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Shouldn't actually be run directly, obviously
 
-export PATH="$PATH:${$(find $HOME/.local/bin -type d -printf %p:)%%:}"
+export PATH="${$(find $HOME/.local/bin -type d -printf %p:)%%:}:$PATH"
 unsetopt PROMPT_SP
 export EDITOR="nvim"
 export TERMINAL="st"
