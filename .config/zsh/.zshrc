@@ -51,3 +51,30 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 export GPG_TTY=$(tty)
 
 alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
+
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+[ -f "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC"
+
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	rsync="rsync -vrPlu" \
+	mkd="mkdir -pv" \
+
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto" \
+	gpg="gpg --expert"
+
+alias \
+	ka="killall" \
+	g="git" \
+	sdn="sudo shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	z="zathura"
