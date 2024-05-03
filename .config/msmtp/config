@@ -1,0 +1,13 @@
+defaults
+port 465
+tls on
+tls_starttls off
+
+account runxiyu
+host mail.runxiyu.org
+from me@runxiyu.org
+auth on
+user me@runxiyu.org
+passwordeval pass show runxiyu.org/me
+
+account default : runxiyu
