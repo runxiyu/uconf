@@ -4,3 +4,4 @@
 
 [sendemail]
 	sendmailCmd = /usr/bin/msmtp --account runxiyu
+	annotate = yes
