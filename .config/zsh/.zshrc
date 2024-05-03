@@ -58,7 +58,7 @@ alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
 alias \
 	cp="cp -iv" \
 	mv="mv -iv" \
-	rm="rm -vI" \
+	rm="rm -vi" \
 	bc="bc -ql" \
 	rsync="rsync -vrPlu" \
 	mkd="mkdir -pv" \
