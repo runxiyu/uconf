@@ -9,6 +9,7 @@ set $right l
 
 set $term foot
 set $menu fuzzel
+set $fm foot -e vifm ~
 
 output eDP-1 \
 	resolution 2560x1600 \
@@ -35,6 +36,7 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 }
 
 bindsym $mod+Return exec $term
+bindsym $mod+e exec $fm
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+Return exec $menu
 # Use mouse to drag/resize windows
@@ -121,8 +123,8 @@ bar {
 	status_command while echo "$(cat /sys/class/power_supply/macsmc-battery/capacity)"'%' "$(date +'%w %Y-%m-%d %H:%M:%S')"; do sleep 1; done
 	colors {
 		statusline #ffffff
-		background #323232
-		inactive_workspace #32323200 #32323200 #5c5c5c
+		background #323232ff
+		inactive_workspace #323232ff #323232ff #5c5c5c
 	}
 }
 
