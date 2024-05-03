@@ -1,3 +1,6 @@
 [user]
 	email = me@runxiyu.org
 	name = Runxi Yu
+
+[sendemail]
+	sendmailCmd = /usr/bin/msmtp --account runxiyu
