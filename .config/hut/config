@@ -1,0 +1,3 @@
+instance "sr.ht" {
+	access-token-cmd pass show sr.ht/runxiyu/hut-token
+}
