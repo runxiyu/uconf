@@ -22,6 +22,8 @@ exec swayidle -w \
          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -c 000000'
 
+exec mako
+
 output DP-2 subpixel none
 output LVDS-1 subpixel none
 

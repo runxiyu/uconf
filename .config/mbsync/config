@@ -1,0 +1,22 @@
+IMAPAccount runxiyu
+Host mail.runxiyu.org
+User me@runxiyu.org
+PassCmd "pass show runxiyu.org/me"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore runxiyu-remote
+Account runxiyu
+
+MaildirStore runxiyu-local
+SubFolders Verbatim
+Path ~/.local/share/mail/runxiyu/
+Inbox ~/.local/share/mail/runxiyu/Inbox
+
+Channel runxiyu
+Far :runxiyu-remote:
+Near :runxiyu-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
