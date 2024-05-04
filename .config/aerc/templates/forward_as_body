@@ -1,0 +1,12 @@
+X-Mailer: aerc {{version}}
+X-Pronouns-Preferred: they/them
+
+Forwarded message from {{(index .OriginalFrom 0).Name}} on {{dateFormat .OriginalDate "Mon Jan 2, 2006 at 3:04 PM"}}:
+{{.OriginalText}}
+
+<++>
+
+--
+Best regards,
+Runxi Yu (they/them)
+https://runxiyu.org/
