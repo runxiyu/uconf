@@ -52,8 +52,8 @@ export GPG_TTY=$(tty)
 
 alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
 
-[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
-[ -f "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC"
+alias vim="nvim" vimdiff="nvim -d"
+alias mbsync="mbsync -c $MBSYNCRC"
 
 alias \
 	cp="cp -iv" \
