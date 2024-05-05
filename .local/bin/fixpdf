@@ -1,0 +1,22 @@
+#!/bin/bash
+# Copyright © 2024 DiffieHellman
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+# Return invalid usage if there aren't at least 2 args
+[ "$#" -gt 0 ] || exit 2
+
+for pdf ; do
+        # GNU GhostScript can repair corrupted pdf's with broken xref's etc that are outputted by proprietary software, plus it can also reduce the size of excessively large pdf's
+        gs -o "${pdf%.*}_$(date +%d%m%y).pdf" -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress "$pdf" && rm "$pdf"
+done
