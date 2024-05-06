@@ -24,6 +24,7 @@ exec swayidle -w \
 
 exec mako
 
+exec gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 exec gpg-agent --daemon --default-cache-ttl=3600 --max-cache-ttl 14400
 
 output DP-2 subpixel none
