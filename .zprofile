@@ -4,7 +4,7 @@
 export PATH="${$(find $HOME/.local/bin -type d -printf %p:)%%:}:$PATH"
 unsetopt PROMPT_SP
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="foot"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
