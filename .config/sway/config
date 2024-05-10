@@ -10,6 +10,7 @@ set $right l
 set $term foot
 set $menu fuzzel
 set $fm foot -e vifm ~
+set $em foot -e aerc
 
 output eDP-1 \
 	resolution 2560x1600 \
@@ -41,7 +42,8 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 }
 
 bindsym $mod+Return exec $term
-bindsym $mod+e exec $fm
+bindsym $mod+e exec $em
+bindsym $mod+r exec $fm
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+Return exec $menu
 # Use mouse to drag/resize windows
@@ -116,7 +118,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+t mode "resize"
 
 gaps inner 3
 gaps outer 1
