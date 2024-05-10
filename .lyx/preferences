@@ -18,6 +18,7 @@ Format 24
 \screen_font_roman "system-ui"
 \screen_font_sans "system-ui"
 \screen_font_sizes 5 7 8 9 10 12 14.4 17.26 20.74 24.88
+\open_buffers_in_tabs false
 
 #
 # COLOR SECTION ###################################
