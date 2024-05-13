@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ -z "$1" ] && exit 1
+
+scp "$1" me@runxiyu.org:/var/www/root/"$(basename "$1")"
