@@ -14,9 +14,10 @@ set $em foot -e aerc
 
 output eDP-1 \
 	resolution 2560x1600 \
-	position 0,0 \
 	scale 1.5 \
-	bg ~/misc/bg.png fill
+	position 0,0
+
+#	bg ~/misc/bg.png fill
 
 exec swayidle -w \
          timeout 350 'swaylock -f -c 000000' \
@@ -25,6 +26,7 @@ exec swayidle -w \
 
 exec mako
 
+exec /usr/libexec/xdg-desktop-portal-wlr
 exec gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 exec gpg-agent --daemon --default-cache-ttl=3600 --max-cache-ttl 14400
 
