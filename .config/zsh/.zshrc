@@ -78,3 +78,5 @@ alias \
 	e="$EDITOR" \
 	v="$EDITOR" \
 	z="zathura"
+
+alias fzo="fzf | xargs -d $'\n' xdg-open"
