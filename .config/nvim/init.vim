@@ -40,3 +40,4 @@ let g:vimtex_view_method = 'zathura'
 let maplocalleader = ','
 
 nmap <C-N> :VimtexCompile<CR><CR>
+map <C-M> :keepp /<++><CR>ca<
