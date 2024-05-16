@@ -20,8 +20,8 @@ set incsearch
 "set tabstop=8
 "set noexpandtab
 
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_nr_show=1
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline#extensions#tabline#buffer_nr_show=1
 set laststatus=2
 set noshowmode
 set timeoutlen=50
@@ -41,3 +41,5 @@ let maplocalleader = ','
 
 nmap <C-N> :VimtexCompile<CR><CR>
 map <C-M> :keepp /<++><CR>ca<
+
+set nowrap
