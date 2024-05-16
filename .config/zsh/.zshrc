@@ -80,3 +80,4 @@ alias \
 	z="zathura"
 
 alias fzo="fzf | xargs -d $'\n' xdg-open"
+alias bright="brightnessctl set"
