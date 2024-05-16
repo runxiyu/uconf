@@ -5,3 +5,7 @@
 [sendemail]
 	sendmailCmd = /usr/bin/msmtp --account runxiyu
 	annotate = yes
+[alias]
+	pushall = !git remote | xargs -L1 git push --all
+[init]
+	defaultBranch = master
