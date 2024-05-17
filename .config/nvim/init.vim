@@ -1,8 +1,8 @@
 " Remember to install:
-" vim-airline
+" vim-airline (if wanted)
 " vim-fugitive
-" vim-fugitive
-" vim-syntastic-{c,tex,sh,python,go,json,html,css,lua,zsh}
+" vim-jedi
+" python3-nvim
 
 call plug#begin()
 Plug 'https://github.com/sile-typesetter/vim-sile'
@@ -15,10 +15,10 @@ set shortmess+=I " Hide startup message
 set undofile
 set undodir=~/.local/share/nvim/undo
 
-set incsearch
+" set incsearch
 
-"set tabstop=8
-"set noexpandtab
+" set tabstop=8
+" set noexpandtab
 
 " let g:airline#extensions#tabline#enabled=1
 " let g:airline#extensions#tabline#buffer_nr_show=1
@@ -38,8 +38,11 @@ nnoremap <C-H> <C-W><C-H>
 
 let g:vimtex_view_method = 'zathura'
 let maplocalleader = ','
+let leader = '\'
 
 nmap <C-N> :VimtexCompile<CR><CR>
 map <C-M> :keepp /<++><CR>ca<
 
-set nowrap
+" set nowrap
+
+let g:jedi#auto_initialization = 1
