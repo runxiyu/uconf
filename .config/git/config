@@ -1,6 +1,7 @@
 [user]
 	email = me@runxiyu.org
 	name = Runxi Yu
+	signingkey = 4B9840F43793EAFC56242BC6066289148176003F
 
 [sendemail]
 	sendmailCmd = /usr/bin/msmtp --account runxiyu
@@ -9,3 +10,7 @@
 	pushall = !git remote | xargs -L1 git push --all
 [init]
 	defaultBranch = master
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
