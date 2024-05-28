@@ -1,3 +1,0 @@
-#!/bin/sh
-[ -z "$1" ] && exit
-echo $1 | sudo tee /sys/class/backlight/apple-panel-bl/brightness
