@@ -5,7 +5,7 @@
 
 [sendemail]
 	sendmailCmd = /usr/bin/msmtp --account runxiyu
-	annotate = yes
+#	annotate = yes
 [alias]
 	pushall = !git remote | xargs -L1 git push --all
 [init]
@@ -14,3 +14,7 @@
 	gpgsign = true
 [tag]
 	gpgsign = true
+[merge]
+	conflictstyle = diff3
+[am]
+	threeWay = true

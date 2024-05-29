@@ -64,7 +64,7 @@ alias \
 	mkd="mkdir -pv" \
 
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="ls -N --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
@@ -81,3 +81,4 @@ alias \
 
 alias fzo="fzf | xargs -d $'\n' xdg-open"
 alias bright="brightnessctl set"
+alias mypy="mypy --strict"
