@@ -2,6 +2,8 @@
 # Shouldn't actually be run directly, obviously
 
 export PATH="${$(find $HOME/.local/bin -type d -printf %p:)%%:}:$PATH"
+export PATH="$HOME/.local/share/cargo/bin:$PATH"
+export PATH="$HOME/.local/share/go/bin:$PATH"
 unsetopt PROMPT_SP
 export EDITOR="nvim"
 export TERMINAL="foot"
