@@ -5,8 +5,8 @@
 " python3-nvim
 
 call plug#begin()
-Plug 'https://github.com/sile-typesetter/vim-sile'
 Plug 'https://github.com/lervag/vimtex'
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 
@@ -46,3 +46,44 @@ map <C-M> :keepp /<++><CR>ca<
 " set nowrap
 
 let g:jedi#auto_initialization = 1
+
+colorscheme default
+" let g:seoul256_light_background = 256
+" colorscheme seoul256-light
+" colorscheme one-dark
+" syntax enable
+" highlight Normal ctermfg=none ctermbg=none
+" highlight NonText ctermfg=none ctermbg=none
+" highlight EndOfBuffer ctermfg=none ctermbg=none
+" highlight TabLineFill ctermfg=none ctermbg=none
+" highlight Search ctermbg=12
+" highlight NonText ctermfg=darkgrey
+" highlight SpecialKey ctermfg=darkgrey
+" highlight clear SignColumn
+" highlight Comment cterm=bold ctermfg=none
+" highlight StatusLine cterm=none ctermbg=none ctermfg=darkgrey
+" highlight StatusLineNC cterm=none ctermbg=none ctermfg=darkgrey
+" highlight Title cterm=none ctermfg=darkgrey
+" highlight TabLineFill cterm=none
+" highlight TabLine cterm=none ctermfg=darkgrey ctermbg=none
+" highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
+" highlight Todo ctermbg=NONE ctermfg=red cterm=bold
+" highlight PreProc ctermfg=grey
+" highlight String ctermfg=darkblue cterm=italic
+" highlight Type ctermfg=darkblue
+" highlight lineNr ctermfg=grey cterm=italic
+" highlight cIncluded ctermfg=NONE cterm=bold
+" highlight pythonInclude ctermfg=blue
+" highlight pythonConditional ctermfg=darkcyan
+" highlight pythonBuiltin ctermfg=darkcyan
+" highlight Pmenu ctermbg=white ctermfg=black
+" highlight PmenuSel ctermbg=darkcyan ctermfg=black
+" highlight hareKeyword ctermbg=NONE ctermfg=blue
+" highlight hareLabel ctermbg=NONE cterm=bold
+" highlight hareType ctermfg=darkcyan
+
+set hlsearch!
+nnoremap <F3> :set hlsearch!<CR>
+
+set bg=dark
+set guifont=monospace:h12
