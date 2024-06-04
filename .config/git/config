@@ -2,19 +2,25 @@
 	email = me@runxiyu.org
 	name = Runxi Yu
 	signingkey = 4B9840F43793EAFC56242BC6066289148176003F
-
 [sendemail]
 	sendmailCmd = /usr/bin/msmtp --account runxiyu
-#	annotate = yes
+	annotate = yes
+	confirm = auto
 [alias]
-	pushall = !git remote | xargs -L1 git push --all
+	pushall = !git remote | xargs -L1 git push --all --verbose
+	cite = log -1 --pretty=cite
+	logt = log --graph --decorate --color=auto --oneline --all
+	ecommit = commit -m '' --allow-empty-message
 [init]
 	defaultBranch = master
 [commit]
 	gpgsign = true
+	verbose = true
 [tag]
 	gpgsign = true
 [merge]
 	conflictstyle = diff3
 [am]
 	threeWay = true
+[log]
+	date = iso
