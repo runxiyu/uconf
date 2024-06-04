@@ -108,18 +108,19 @@ bindsym $mod+a focus parent
 # bindsym $mod+minus scratchpad show
 
 mode "resize" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+	bindsym $left resize shrink width 10px
+	bindsym $down resize grow height 10px
+	bindsym $up resize shrink height 10px
+	bindsym $right resize grow width 10px
+	bindsym Left resize shrink width 10px
+	bindsym Down resize grow height 10px
+	bindsym Up resize shrink height 10px
+	bindsym Right resize grow width 10px
+	
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
+
 bindsym $mod+t mode "resize"
 
 gaps inner 3
@@ -129,6 +130,8 @@ default_border pixel 3
 bar {
 	font monospace 10
 	position top
+	# status_command runxibar
+	# status_command while true; do date; sleep 1; done
 	status_command while echo "$(cat /sys/class/power_supply/macsmc-battery/capacity)"'%' "$(date +'%w %Y-%m-%d %H:%M:%S')"; do sleep 1; done
 	colors {
 		statusline #ffffff
