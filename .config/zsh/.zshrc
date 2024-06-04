@@ -75,10 +75,23 @@ alias \
 	ka="killall" \
 	g="git" \
 	sdn="sudo shutdown -h now" \
-	e="$EDITOR" \
 	v="$EDITOR" \
 	z="zathura"
 
 alias fzo="fzf | xargs -d $'\n' xdg-open"
 alias bright="brightnessctl set"
-alias mypy="mypy --strict"
+alias mypy="python3 -m mypy --strict"
+alias venv=". ./venv/bin/activate"
+
+alias git="today git"
+
+e() {
+	neovide --fork -- "$@"
+}
+ex() {
+	neovide --fork -- "$@"
+	exit
+}
+
+alias gcc="gcc -Wall -Wextra -pedantic"
+alias cc="gcc -Wall -Wextra -pedantic"
