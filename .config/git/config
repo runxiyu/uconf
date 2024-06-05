@@ -24,3 +24,5 @@
 	threeWay = true
 [log]
 	date = iso
+[pull]
+	rebase = true
