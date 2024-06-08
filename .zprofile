@@ -53,7 +53,7 @@ sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/
 umask 007
 
 
-PLAN9=/home/runxiyu/.local/src/plan9port-master
+PLAN9="$HOME"/.local/src/plan9port-master
 export PLAN9
 PATH=$PATH:$PLAN9/bin
 export PATH
