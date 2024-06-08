@@ -10,12 +10,15 @@
 	pushall = !git remote | xargs -L1 git push --all --verbose
 	cite = log -1 --pretty=cite
 	logt = log --graph --decorate --color=auto --oneline --all
+	scommit = commit --signoff
 	ecommit = commit -m '' --allow-empty-message
+	unstage = restore --staged
 [init]
 	defaultBranch = master
 [commit]
 	gpgsign = true
 	verbose = true
+	signoff = true
 [tag]
 	gpgsign = true
 [merge]
