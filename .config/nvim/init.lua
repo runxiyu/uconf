@@ -1,3 +1,7 @@
+vim.cmd([[
+
+" set runtimepath=~/.config/nvim,~/.config/nvim/pack/*/start/*,~/.local/share/nvim/site,/etc/xdg/nvim,/usr/share/nvim/site,/usr/share/nvim/runtime,/usr/lib/nvim,/usr/share/nvim/site/after
+
 " Remember to install:
 " vim-airline (if wanted)
 " vim-fugitive
@@ -7,6 +11,7 @@
 call plug#begin()
 Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter'
+" Plug 'https://github.com/neovim/nvim-lspconfig' (using builtin packages instead)
 call plug#end()
 
 
@@ -87,3 +92,33 @@ nnoremap <F3> :set hlsearch!<CR>
 
 set bg=dark
 set guifont=monospace:h12
+
+]])
+
+-- vim.lsp.start({
+-- 	name = 'ccls',
+-- 	cmd = {'ccls'},
+-- 	root_dir = root_pattern({"compile_commands.json", ".ccls", ".git"}),
+-- })
+
+
+require'lspconfig'.ccls.setup{}
+
+require'nvim-treesitter.configs'.setup {
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "hare", "python" },
+	sync_install = false,
+	auto_install = true,
+	ignore_install = { "javascript" },
+	highlight = {
+		enable = true,
+		-- disable = { "c", "rust" },
+		disable = function(lang, buf)
+			local max_filesize = 100 * 1024 -- 100 KB
+			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+			if ok and stats and stats.size > max_filesize then
+				return true
+			end
+		end,
+		additional_vim_regex_highlighting = false,
+	},
+}
