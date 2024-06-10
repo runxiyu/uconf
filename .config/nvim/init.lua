@@ -66,6 +66,8 @@ require'nvim-treesitter.configs'.setup {
 		"git_config",
 		"csv",
 		"commonlisp",
+		"racket",
+		"scheme",
 		"bibtex",
 		"ada",
 		"markdown",
