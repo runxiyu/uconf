@@ -82,7 +82,7 @@ colorscheme default
 " highlight hareLabel ctermbg=NONE cterm=bold
 " highlight hareType ctermfg=darkcyan
 
-set hlsearch!
+"set hlsearch!
 nnoremap <F3> :set hlsearch!<CR>
 
 set bg=dark
