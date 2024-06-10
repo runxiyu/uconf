@@ -35,7 +35,7 @@ let leader         = '\'
 
 
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "hare", "python", "diff", "git_rebase", "css", "html", "javascript" },
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "hare", "xml", "python", "diff", "git_rebase", "css", "html", "javascript" },
 	sync_install = false,
 	auto_install = true,
 	-- ignore_install = { "javascript" },
