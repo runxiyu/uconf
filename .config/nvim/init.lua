@@ -22,7 +22,7 @@ vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
-vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
+-- vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
 
 vim.cmd.colorscheme('default')
 vim.opt.background = "dark"
@@ -35,21 +35,64 @@ let leader         = '\'
 
 
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "hare", "xml", "python", "diff", "git_rebase", "css", "html", "javascript" },
+	ensure_installed = {
+		"c",
+		"go",
+		"r",
+		"passwd",
+		"bash",
+		"asm",
+		"nasm",
+		"regex",
+		"json",
+		"yaml",
+		"tsv",
+		"toml",
+		"ssh_config",
+		"sql",
+		"scss",
+		"rst",
+		"rust",
+		"python",
+		"lua",
+		"vim",
+		"vimdoc",
+		"ini",
+		"http",
+		"htmldjango",
+		"haskell",
+		"gomod",
+		"gosum",
+		"git_config",
+		"csv",
+		"commonlisp",
+		"bibtex",
+		"ada",
+		"markdown",
+		"markdown_inline",
+		"make",
+		"hare",
+		"xml",
+		"diff",
+		"git_rebase",
+		"css",
+		"html",
+		"javascript" 
+	},
 	sync_install = false,
 	auto_install = true,
 	-- ignore_install = { "javascript" },
 	highlight = {
 		enable = true,
-		-- disable = { "c", "rust" },
-		disable = function(lang, buf)
-			local max_filesize = 100 * 1024 -- 100 KB
-			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-			if ok and stats and stats.size > max_filesize then
-				return true
-			end
-		end,
-		additional_vim_regex_highlighting = false,
+		disable = { "latex" },
+		-- disable = function(lang, buf)
+		-- 	local max_filesize = 100 * 1024 -- 100 KB
+		-- 	local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+		-- 	if ok and stats and stats.size > max_filesize then
+		-- 		return true
+		-- 	end
+		-- end,
+		-- additional_vim_regex_highlighting = { "latex", "markdown" },
 	},
 }
 
