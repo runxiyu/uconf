@@ -10,9 +10,15 @@
 	pushall = !git remote | xargs -L1 git push --all --verbose
 	cite = log -1 --pretty=cite
 	logt = log --graph --decorate --color=auto --oneline --all
-	scommit = commit --signoff
-	ecommit = commit -m '' --allow-empty-message
+	cs = commit --signoff
+	ec = commit -m '' --allow-empty-message
+	c = commit
+	a = add
+	s = status
+	rbi = rebase -i
 	unstage = restore --staged
+	pm = push mirrors --all --verbose
+	po = push origin --all
 [init]
 	defaultBranch = master
 [commit]
