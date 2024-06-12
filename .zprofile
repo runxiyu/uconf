@@ -1,9 +1,10 @@
 #!/bin/zsh
 # Shouldn't actually be run directly, obviously
 
-export PATH="${$(find $HOME/.local/bin -type d -printf %p:)%%:}:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/share/go/bin:$PATH"
+export PATH="$HOME/.local/share/npm/bin:$PATH"
+export PATH="${$(find $HOME/.local/bin -type d -printf %p:)%%:}:$PATH"
 unsetopt PROMPT_SP
 export EDITOR="nvim"
 export TERMINAL="foot"
