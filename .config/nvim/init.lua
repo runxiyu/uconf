@@ -1,3 +1,4 @@
+-- curl https://git.runxiyu.org/runxiyu/current/uconf.git/plain/.local/share/nvim/site/autoload/plug.vim -o "$HOME"/.local/share/nvim/site/autoload/plug.vim
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 Plug 'https://github.com/tpope/vim-fugitive'
@@ -9,11 +10,12 @@ vim.call('plug#end')
 vim.opt.shortmess:prepend("I")
 vim.opt.undofile       = true
 vim.opt.encoding       = "utf-8"
-vim.opt.undodir        = "/home/runxiyu/.local/share/nvim/undo"
+vim.opt.undodir	= "/home/runxiyu/.local/share/nvim/undo"
 vim.opt.incsearch      = true
-vim.opt.hidden         = true -- allow background buffers
+vim.opt.hidden	 = true -- allow background buffers
 vim.opt.laststatus     = 2
 vim.opt.timeoutlen     = 50
+vim.opt.mouse	  = ""
 
 vim.g.vimtex_view_method = "zathura"
 
@@ -24,69 +26,69 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 -- vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
 
-vim.cmd.colorscheme('default')
+vim.cmd.colorscheme('vim')
 vim.opt.background = "dark"
 vim.opt.guifont    = "monospace:h12"
 
 vim.cmd([[
 let maplocalleader = ','
-let leader         = '\'
+let leader	 = '\'
 ]])
 
 
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = {
-		"c",
-		"go",
-		"r",
-		"passwd",
-		"bash",
+		"ada",
 		"asm",
-		"nasm",
-		"regex",
-		"json",
-		"yaml",
-		"tsv",
-		"toml",
-		"ssh_config",
-		"sql",
-		"scss",
-		"rst",
-		"rust",
-		"python",
-		"lua",
-		"vim",
-		"vimdoc",
-		"ini",
-		"http",
-		"htmldjango",
-		"haskell",
+		"bash",
+		-- "bibtex", -- seems broken on commented lines
+		"c",
+		"commonlisp",
+		"css",
+		"csv",
+		"diff",
+		"git_config",   
+		"git_rebase",
+		"go",
 		"gomod",
 		"gosum",
-		"git_config",
-		"csv",
-		"commonlisp",
-		"racket",
-		"scheme",
-		"bibtex",
-		"ada",
+		"hare",
+		"haskell",
+		"html",
+		"htmldjango",
+		"http",
+		"ini",
+		"javascript",
+		"json",
+		"lua",
+		"make",
 		"markdown",
 		"markdown_inline",
-		"make",
-		"hare",
+		"nasm",
+		"passwd",
+		"python",   
+		"r",
+		"racket",
+		"regex",
+		"rst",
+		"rust",
+		"scheme", 
+		"scss",
+		"sql",
+		"ssh_config",
+		"toml",
+		"tsv",
+		"vim",
+		"vimdoc",
 		"xml",
-		"diff",
-		"git_rebase",
-		"css",
-		"html",
-		"javascript" 
+		"yaml",
 	},
 	sync_install = false,
 	auto_install = true,
-	-- ignore_install = { "javascript" },
+	ignore_install = { "latex", "bibtex" },
 	highlight = {
 		enable = true,
-		disable = { "latex" },
+		disable = { "latex", "bibtex" }, -- VimTeX handles this for us
 		-- disable = function(lang, buf)
 		-- 	local max_filesize = 100 * 1024 -- 100 KB
 		-- 	local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
@@ -94,8 +96,11 @@ require'nvim-treesitter.configs'.setup {
 		-- 		return true
 		-- 	end
 		-- end,
-		-- additional_vim_regex_highlighting = { "latex", "markdown" },
+		additional_vim_regex_highlighting = { "latex", "markdown" },
 	},
 }
 
 require'lspconfig'.ccls.setup{}
+require'lspconfig'.pylsp.setup{}
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.eslint.setup{}
