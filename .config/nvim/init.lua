@@ -5,6 +5,8 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter'
 Plug 'https://github.com/neovim/nvim-lspconfig'
+Plug 'https://github.com/tomasiser/vim-code-dark'
+Plug 'https://github.com/vim-airline/vim-airline'
 vim.call('plug#end')
 
 vim.opt.shortmess:prepend("I")
@@ -26,9 +28,14 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 -- vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
 
-vim.cmd.colorscheme('vim')
-vim.opt.background = "dark"
-vim.opt.guifont    = "monospace:h12"
+vim.g.codedark_conservative = 0
+vim.g.codedark_modern       = 1
+vim.g.codedark_italics      = 1
+vim.g.codedark_transparent  = 0
+vim.g.airline_theme         = "codedark"
+vim.opt.background          = "dark"
+vim.opt.guifont             = "monospace:h12"
+vim.cmd.colorscheme('codedark')
 
 vim.cmd([[
 let maplocalleader = ','
