@@ -1,3 +1,5 @@
+# [core]
+# 	excludesFile
 [user]
 	email = me@runxiyu.org
 	name = Runxi Yu
@@ -27,6 +29,7 @@
 	signoff = true
 [tag]
 	gpgsign = true
+	annotated = true
 [merge]
 	conflictstyle = diff3
 [am]
@@ -35,3 +38,5 @@
 	date = iso
 [pull]
 	rebase = true
+[core]
+	excludesFile = ~/.config/git/exclude
