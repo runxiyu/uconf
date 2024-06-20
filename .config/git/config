@@ -26,7 +26,6 @@
 [commit]
 	gpgsign = true
 	verbose = true
-	signoff = true
 [tag]
 	gpgsign = true
 	annotated = true

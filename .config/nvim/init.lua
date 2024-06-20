@@ -38,9 +38,9 @@ vim.g.codedark_transparent  = 0
 vim.g.airline_theme         = "codedark"
 vim.opt.background          = "dark"
 vim.opt.guifont             = "monospace:h12"
--- vim.cmd.colorscheme('default')
+vim.cmd.colorscheme('default')
 -- vim.cmd.colorscheme('codedark')
-vim.cmd.colorscheme('vim')
+-- vim.cmd.colorscheme('vim')
 
 vim.cmd([[
 let maplocalleader = ','

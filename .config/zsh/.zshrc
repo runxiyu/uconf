@@ -95,3 +95,9 @@ ex() {
 
 alias gcc="gcc -Wall -Wextra -pedantic"
 alias cc="gcc -Wall -Wextra -pedantic"
+
+function cd_list() {
+    emulate -L zsh
+    ls
+}
+chpwd_functions=(${chpwd_functions[@]} "cd_list")
