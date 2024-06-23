@@ -130,9 +130,9 @@ default_border pixel 3
 bar {
 	font monospace 10
 	position top
-	# status_command runxibar
+	status_command ~/etc/rxbar/rxbar
 	# status_command while true; do date; sleep 1; done
-	status_command while echo "$(cat /sys/class/power_supply/macsmc-battery/capacity)"'%' "$(date +'%w %Y-%m-%d %H:%M:%S')"; do sleep 1; done
+	# status_command while echo "$(cat /sys/class/power_supply/macsmc-battery/capacity)"'%' "$(date +'%w %Y-%m-%d %H:%M:%S')"; do sleep 1; done
 	colors {
 		statusline #ffffff
 		background #323232ff

@@ -1,7 +1,0 @@
-#!/bin/sh
-
-cd ~/.local/share/tasks
-git add .
-git commit -m "Tasks update"
-git pull
-git push
