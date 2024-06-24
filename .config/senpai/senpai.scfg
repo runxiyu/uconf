@@ -1,3 +1,7 @@
 address "runxiyu.org:26687"
 nickname "runxiyu"
+username "runxiyu"
 password-cmd pass irc/soju.runxiyu.org/runxiyu
+tls true
+mouse false
+typings false
