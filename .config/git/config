@@ -39,3 +39,5 @@
 	rebase = true
 [core]
 	excludesFile = ~/.config/git/exclude
+[diff]
+	algorithm = histogram
