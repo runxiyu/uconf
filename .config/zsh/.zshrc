@@ -1,19 +1,17 @@
 autoload -U colors && colors
 
-function git_branch_name()
-{
-  branch=$(git symbolic-ref HEAD 2> /dev/null | cut -d '/' -f 3-)
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo " $branch"
-  fi
+function git_branch_name() {
+	branch=$(git symbolic-ref HEAD 2> /dev/null | cut -d '/' -f 3-)
+	if [[ $branch == "" ]];
+	then
+		:
+	else
+		echo " $branch"
+	fi
 }
 
 setopt prompt_subst
 
-# prompt='%B%{$fg[blue]%}[%{$fg[blue]%}%n%{$fg[blue]%}@%{$fg[blue]%}%M %{$fg[green]%}%~%{$fg[yellow]%}$(git_branch_name)%{$fg[blue]%}]$%b '
 prompt='%B%{$fg[blue]%}[%{$fg[blue]%}%n %{$fg[green]%}%~%{$fg[yellow]%}$(git_branch_name)%{$fg[blue]%}]$%b '
 
 setopt autocd
@@ -113,7 +111,7 @@ alias gcc="gcc -Wall -Wextra -pedantic"
 alias cc="gcc -Wall -Wextra -pedantic"
 
 function cd_list() {
-    emulate -L zsh
-    ls
+	emulate -L zsh
+	ls
 }
 chpwd_functions=(${chpwd_functions[@]} "cd_list")
