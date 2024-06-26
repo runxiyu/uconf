@@ -19,8 +19,9 @@
 	s = status
 	rbi = rebase -i
 	unstage = restore --staged
+	p = push --verbose
+	po = push origin --all --verbose
 	pm = push mirrors --all --verbose
-	po = push origin --all
 [init]
 	defaultBranch = master
 [commit]
