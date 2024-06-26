@@ -1,5 +1,21 @@
 autoload -U colors && colors
-PS1="%B%{$fg[blue]%}[%{$fg[blue]%}%n%{$fg[blue]%}@%{$fg[blue]%}%M %{$fg[green]%}%~%{$fg[blue]%}]$%b "
+
+function git_branch_name()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | cut -d '/' -f 3-)
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo " $branch"
+  fi
+}
+
+setopt prompt_subst
+
+# prompt='%B%{$fg[blue]%}[%{$fg[blue]%}%n%{$fg[blue]%}@%{$fg[blue]%}%M %{$fg[green]%}%~%{$fg[yellow]%}$(git_branch_name)%{$fg[blue]%}]$%b '
+prompt='%B%{$fg[blue]%}[%{$fg[blue]%}%n %{$fg[green]%}%~%{$fg[yellow]%}$(git_branch_name)%{$fg[blue]%}]$%b '
+
 setopt autocd
 stty stop undef
 setopt interactive_comments
