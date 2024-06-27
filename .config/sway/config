@@ -14,10 +14,11 @@ set $em foot -e aerc
 
 output eDP-1 \
 	resolution 2560x1600 \
-	scale 1.5 \
+	scale 1 \
 	position 0,0
 
 #	bg ~/misc/bg.png fill
+# scale 1.5 is probably better for most purposes
 
 exec swayidle -w \
          timeout 350 'swaylock -f -c 000000' \
@@ -128,7 +129,7 @@ gaps outer 1
 default_border pixel 3
 
 bar {
-	font monospace 10
+	font monospace 15
 	position top
 	status_command ~/etc/rxbar/rxbar
 	# status_command while true; do date; sleep 1; done
