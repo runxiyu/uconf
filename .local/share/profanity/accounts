@@ -1,0 +1,13 @@
+[runxiyu]
+enabled=true
+jid=me@runxiyu.org
+server=runxiyu.org
+resource=profanity.DXSo
+muc.nick=Runxi Yu
+presence.last=online
+presence.login=online
+priority.online=0
+priority.chat=0
+priority.away=0
+priority.xa=0
+priority.dnd=0
