@@ -11,4 +11,4 @@ priority.chat=0
 priority.away=0
 priority.xa=0
 priority.dnd=0
-eval_password=pass show xmpp/runxiyu.org/runxiyu
+eval_password=pass show xmpp/runxiyu.org/me
