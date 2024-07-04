@@ -1,2 +1,1 @@
-#!/bin/sh
-exec "$HOME/.local/src/ccls/Release/ccls" "$@"
+/home/runxiyu/ext/ccls/ccls
