@@ -64,3 +64,5 @@ export PATH
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
 
 export GOPROXY=https://mirrors.aliyun.com/goproxy/
+
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
