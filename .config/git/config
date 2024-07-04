@@ -42,3 +42,8 @@
 	excludesFile = ~/.config/git/exclude
 [diff]
 	algorithm = histogram
+
+[notemap]
+	imapServer = mail.runxiyu.org
+	imapServerPort = 993
+	imapUser = me@runxiyu.org
