@@ -3,7 +3,8 @@ Host mail.runxiyu.org
 User me@runxiyu.org
 PassCmd "pass show runxiyu.org/me"
 SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
+#TLSType IMAPS
+#CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore runxiyu-remote
 Account runxiyu
