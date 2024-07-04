@@ -7,6 +7,7 @@ set $down j
 set $up k
 set $right l
 
+set $wb firefox
 set $term foot
 set $menu dmenu_run
 set $fm foot -e vifm ~
@@ -44,6 +45,7 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 }
 
 bindsym $mod+Return exec $term
+bindsym $mod+w exec $wb
 bindsym $mod+e exec $em
 bindsym $mod+r exec $fm
 bindsym $mod+Shift+c kill
@@ -95,7 +97,7 @@ bindsym $mod+b splith
 bindsym $mod+v splitv
 # bindsym $mod+s layout stacking
 # bindsym $mod+s layout default
-bindsym $mod+w layout tabbed
+bindsym $mod+y layout tabbed
 bindsym $mod+d layout toggle split
 
 bindsym $mod+f fullscreen
