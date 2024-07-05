@@ -15,7 +15,7 @@ set $em foot -e aerc
 
 output eDP-1 \
 	resolution 2560x1600 \
-	scale 1.5 \
+	scale 1 \
 	position 0,0 \
 	bg ~/misc/bg.png fill
 
