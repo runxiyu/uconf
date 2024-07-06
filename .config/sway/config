@@ -10,6 +10,7 @@ set $right l
 set $wb firefox
 set $term foot
 set $menu dmenu_run
+set $pass passmenu --type
 set $fm foot -e vifm ~
 set $em foot -e aerc
 
@@ -50,6 +51,7 @@ bindsym $mod+e exec $em
 bindsym $mod+r exec $fm
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+Return exec $menu
+bindsym $mod+p exec $pass
 # Use mouse to drag/resize windows
 floating_modifier $mod normal
 bindsym $mod+Shift+r reload
