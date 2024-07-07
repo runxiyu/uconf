@@ -37,7 +37,7 @@ vim.g.codedark_italics      = 1
 vim.g.codedark_transparent  = 0
 vim.g.airline_theme         = "codedark"
 vim.opt.background          = "dark"
-vim.opt.guifont             = "monospace:h12"
+vim.opt.guifont             = "monospace:h20"
 vim.cmd.colorscheme('default')
 -- vim.cmd.colorscheme('codedark')
 -- vim.cmd.colorscheme('vim')
