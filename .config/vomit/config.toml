@@ -1,0 +1,5 @@
+[runxiyu]
+local = "~/.local/share/vomit/runxiyu"
+remote = "mail.runxiyu.org:993"
+user = "me@runxiyu.org"
+pass-cmd = "pass show runxiyu.org/me"
