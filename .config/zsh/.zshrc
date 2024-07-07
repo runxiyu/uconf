@@ -96,7 +96,7 @@ alias \
 alias fzo="fzf | xargs -d $'\n' xdg-open"
 alias bright="brightnessctl set"
 alias mypy="python3 -m mypy --strict"
-alias venv=". ./venv/bin/activate"
+alias venv=". $HOME/.local/share/venv/activate"
 
 alias git="today git"
 
