@@ -1,5 +1,3 @@
-# [core]
-# 	excludesFile
 [user]
 	email = me@runxiyu.org
 	name = Runxi Yu
@@ -19,6 +17,7 @@
 	s = status
 	rbi = rebase -i
 	unstage = restore --staged
+	untrack = rm --cached
 	p = push --verbose
 	po = push origin --all --verbose
 	pm = push mirrors --all --verbose
