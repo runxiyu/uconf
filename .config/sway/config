@@ -13,7 +13,8 @@ set $menu dmenu_run
 set $pass passmenu --type
 set $otp otpmenu --type
 set $fm foot -e vifm ~
-set $em foot -e aerc
+set $mail foot -e aerc
+set $emacs emacsclient -c
 
 output eDP-1 \
 	resolution 2560x1600 \
@@ -33,6 +34,8 @@ exec /usr/libexec/xdg-desktop-portal-wlr
 exec gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 exec gpg-agent --daemon --default-cache-ttl=3600 --max-cache-ttl 14400
 
+exec emacs --daemon
+
 output DP-2 subpixel none
 output LVDS-1 subpixel none
 
@@ -48,7 +51,8 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 
 bindsym $mod+Return exec $term
 bindsym $mod+w exec $wb
-bindsym $mod+e exec $em
+bindsym $mod+m exec $mail
+bindsym $mod+e exec $emacs
 bindsym $mod+r exec $fm
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+Return exec $menu

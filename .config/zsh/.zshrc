@@ -101,10 +101,10 @@ alias venv=". $HOME/.local/share/venv/activate"
 alias git="today git"
 
 e() {
-	neovide --fork -- "$@"
+	emacsclient -c "$@" &
 }
 ex() {
-	neovide --fork -- "$@"
+	emacsclient -c "$@" &
 	exit
 }
 
