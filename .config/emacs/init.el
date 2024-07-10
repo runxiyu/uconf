@@ -23,10 +23,14 @@
 ;; Misc
 (load-theme 'deeper-blue)
 (setq inhibit-startup-screen t)
+(require 'ivy)
+(require 'company)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(require 'ivy) (ivy-mode 1)
+(blink-cursor-mode -1)
+(fringe-mode -1)
+(ivy-mode 1)
 
 ;; Company
 (defun turn-off-company () (company-mode -1))
@@ -34,7 +38,7 @@
 (add-hook 'circe-mode-hook 'turn-off-company)
 
 ;; Line numbering
-; (global-display-line-numbers-mode 1)
+					; (global-display-line-numbers-mode 1)
 (defun turn-off-line-numbers () (display-line-numbers-mode 0))
 (defun turn-on-line-numbers () (display-line-numbers-mode 1))
 
@@ -111,15 +115,15 @@ Directory defaults to the value of 'move-file-default-target'."
 (evil-set-initial-state 'ses-mode 'emacs)
 (evil-mode 1)
 
-; (evil-define-operator evil-fill-justify (beg end)
-;   "fill justified text."
-;   :move-point nil
-;   :type line
-;   (save-excursion
-;     (condition-case nil
-;         (fill-region beg end "fill")
-;       (error nil))))
-; (define-key evil-normal-state-map "gj" 'evil-fill-justify)
+					; (evil-define-operator evil-fill-justify (beg end)
+					;   "fill justified text."
+					;   :move-point nil
+					;   :type line
+					;   (save-excursion
+					;     (condition-case nil
+					;         (fill-region beg end "fill")
+					;       (error nil))))
+					; (define-key evil-normal-state-map "gj" 'evil-fill-justify)
 
 (require 'elisp-mode)
 (define-key lisp-mode-shared-map (kbd "C-c C-c") 'eval-defun)
@@ -139,12 +143,11 @@ Directory defaults to the value of 'move-file-default-target'."
 (define-key eww-mode-map (kbd "C-x w") 'eww-copy-page-url)
 
 (require 'org)
-; (add-hook 'org-mode-hook 'turn-on-auto-fill)
-; (add-hook 'text-mode-hook 'turn-on-auto-fill)
+					; (add-hook 'org-mode-hook 'turn-on-auto-fill)
+					; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 (require 'eglot)
 
-(require 'company)
 (define-key company-mode-map (kbd "C-<tab>") 'company-complete)
 					; (server-start)
 (custom-set-variables
@@ -152,10 +155,13 @@ Directory defaults to the value of 'move-file-default-target'."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(darkroom magit ivy circe evil company format-all)))
+ '(package-selected-packages '(vterm darkroom magit ivy circe evil company format-all)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(require 'magit)
+(require 'darkroom)
