@@ -18,7 +18,7 @@
 (global-set-key (kbd "<f12>") 'buffer-menu)
 
 ;; Font size
-(set-face-attribute 'default nil :height 300 :family "monospace")
+(set-face-attribute 'default nil :height 200 :family "monospace")
 
 ;; Misc
 (load-theme 'deeper-blue)
