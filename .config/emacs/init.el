@@ -18,7 +18,7 @@
 (global-set-key (kbd "<f12>") 'buffer-menu)
 
 ;; Font size
-(set-face-attribute 'default nil :height 200 :family "monospace")
+(set-face-attribute 'default nil :height 300 :family "monospace")
 
 ;; Misc
 (load-theme 'deeper-blue)
@@ -62,11 +62,10 @@
       circe-format-server-quit "*** Quit: {nick} ({userhost}) quit ({reason})"
       circe-format-server-quit-channel "*** Quit: {nick} ({userhost}) quit ({reason})"
       circe-format-server-topic "*** Topic change by {nick} ({userhost}): {topic-diff}"
-      initial-scratch-message ";; scratch"
+      initial-scratch-message ""
       lui-fill-column 105
       lui-logging-directory (concat user-emacs-directory "irclogs")
       lui-logging-flush-delay 2
-      nix-nixfmt-bin "nixfmt"
       nxml-auto-insert-xml-declaration-flag t
       nxml-slash-auto-complete-flag t
       org-agenda-files '(".")
@@ -86,8 +85,7 @@
       tab-always-indent nil
       use-short-answers t
       split-height-threshold nil
-      split-width-threshold 160
-      )
+      split-width-threshold 160)
 
 
 
@@ -140,20 +138,20 @@ Directory defaults to the value of 'move-file-default-target'."
 (define-key eww-mode-map (kbd "C-x w") 'eww-copy-page-url)
 
 (require 'org)
-(add-hook 'org-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+; (add-hook 'org-mode-hook 'turn-on-auto-fill)
+; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 (require 'eglot)
 
 (require 'company)
 (define-key company-mode-map (kbd "C-<tab>") 'company-complete)
-; (server-start)
+					; (server-start)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(magit ivy circe evil company format-all)))
+ '(package-selected-packages '(darkroom magit ivy circe evil company format-all)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
