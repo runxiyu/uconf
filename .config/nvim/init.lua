@@ -13,7 +13,7 @@ vim.call('plug#end')
 vim.opt.shortmess:prepend("I")
 vim.opt.undofile       = true
 vim.opt.encoding       = "utf-8"
-vim.opt.undodir	       = "/home/runxiyu/.local/share/nvim/undo"
+vim.opt.undodir	       = os.getenv("HOME") .. "/.local/share/nvim/undo"
 vim.opt.incsearch      = true
 vim.opt.hidden	       = true -- allow background buffers
 vim.opt.laststatus     = 2
