@@ -18,7 +18,7 @@
 (global-set-key (kbd "<f12>") 'buffer-menu)
 
 ;; Font size
-(set-face-attribute 'default nil :height 200 :family "monospace")
+(set-face-attribute 'default nil :height 200 :family "DejaVu Sans Mono") ; hardcoding, because Emacs on OS X doesn't respect fontconfig
 
 ;; Misc
 (load-theme 'deeper-blue)
@@ -34,8 +34,9 @@
 (add-hook 'circe-mode-hook 'turn-off-company)
 
 ;; Line numbering
-(global-display-line-numbers-mode 1)
+; (global-display-line-numbers-mode 1)
 (defun turn-off-line-numbers () (display-line-numbers-mode 0))
+(defun turn-on-line-numbers () (display-line-numbers-mode 1))
 
 ;; Unsorted variables
 (setq circe-server-send-unknown-command-p t
@@ -110,15 +111,15 @@ Directory defaults to the value of 'move-file-default-target'."
 (evil-set-initial-state 'ses-mode 'emacs)
 (evil-mode 1)
 
-(evil-define-operator evil-fill-justify (beg end)
-  "fill justified text."
-  :move-point nil
-  :type line
-  (save-excursion
-    (condition-case nil
-        (fill-region beg end "fill")
-      (error nil))))
-(define-key evil-normal-state-map "gj" 'evil-fill-justify)
+; (evil-define-operator evil-fill-justify (beg end)
+;   "fill justified text."
+;   :move-point nil
+;   :type line
+;   (save-excursion
+;     (condition-case nil
+;         (fill-region beg end "fill")
+;       (error nil))))
+; (define-key evil-normal-state-map "gj" 'evil-fill-justify)
 
 (require 'elisp-mode)
 (define-key lisp-mode-shared-map (kbd "C-c C-c") 'eval-defun)
