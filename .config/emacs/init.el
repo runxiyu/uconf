@@ -18,7 +18,7 @@
 (global-set-key (kbd "<f12>") 'buffer-menu)
 
 ;; Font size
-(set-face-attribute 'default nil :height 200 :family "DejaVu Sans Mono") ; hardcoding, because Emacs on OS X doesn't respect fontconfig
+(set-face-attribute 'default nil :height 150 :family "DejaVu Sans Mono") ; hardcoding, because Emacs on OS X doesn't respect fontconfig
 
 ;; Misc
 (load-theme 'deeper-blue)
@@ -36,6 +36,9 @@
 (defun turn-off-company () (company-mode -1))
 (add-hook 'term-mode-hook 'turn-off-company)
 (add-hook 'circe-mode-hook 'turn-off-company)
+
+;; Dired
+(setq dired-listing-switches "-l")
 
 ;; Line numbering
 					; (global-display-line-numbers-mode 1)
