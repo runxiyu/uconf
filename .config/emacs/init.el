@@ -42,6 +42,15 @@
 (defun turn-off-line-numbers () (display-line-numbers-mode 0))
 (defun turn-on-line-numbers () (display-line-numbers-mode 1))
 
+
+;; Gnus
+
+(setq user-mail-address "me@runxiyu.org"
+      user-full-name "Runxi Yu"
+      smtpmail-smtp-server "mail.runxiyu.org"
+      send-mail-function 'smtpmail-send-it
+      smtpmail-smtp-service 465)
+
 ;; Unsorted variables
 (setq circe-server-send-unknown-command-p t
       circe-use-cycle-completion t
