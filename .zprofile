@@ -1,10 +1,14 @@
 #!/bin/zsh
 # Shouldn't actually be run directly, obviously
 
+export PATH="$HOME/.local/share/npm/bin:$PATH"
+if [ -d "/opt/homebrew/bin" ]
+then
+	export PATH="/opt/homebrew/bin:$PATH"
+fi
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/share/go/bin:$PATH"
-export PATH="$HOME/.local/share/npm/bin:$PATH"
-export PATH="${$(find $HOME/.local/bin -type d -printf %p:)%%:}:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/misc:$PATH"
 unsetopt PROMPT_SP
 export EDITOR="nvim"
