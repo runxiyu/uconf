@@ -98,7 +98,10 @@ alias bright="brightnessctl set"
 alias mypy="python3 -m mypy --strict"
 alias venv=". $HOME/.local/share/venv/activate"
 
-alias git="today git"
+if [ "$(uname)" != "Darwin" ]
+then
+	alias git="today git"
+fi
 
 e() {
 	emacsclient -c "$@" &
