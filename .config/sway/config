@@ -138,7 +138,7 @@ gaps outer 1
 default_border pixel 3
 
 bar {
-	font monospace 10
+	font monospace 9
 	position top
 	status_command ~/.local/bin/rxbar
 	# status_command while true; do date; sleep 1; done
