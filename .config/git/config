@@ -7,7 +7,7 @@
 	annotate = yes
 	confirm = auto
 [alias]
-	pushall = !git remote | xargs -L1 git push --all --verbose
+	pushall = !git remote | xargs git push --all --verbose
 	cite = log -1 --pretty=cite
 	logt = log --graph --decorate --color=auto --oneline --all
 	cs = commit --signoff

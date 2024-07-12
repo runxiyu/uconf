@@ -43,11 +43,11 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 	xkb_layout "gb"
 }
 
-input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
-	tap disabled
-	natural_scroll enabled
-	xkb_layout "uscaps"
-}
+# input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
+# 	tap disabled
+# 	natural_scroll enabled
+# 	xkb_layout "uscaps"
+# }
 
 bindsym $mod+Return exec $term
 bindsym $mod+w exec $wb

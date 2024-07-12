@@ -79,12 +79,12 @@ alias \
 	mkd="mkdir -pv" \
 
 alias \
-	ls="ls -N --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
 	ip="ip -color=auto" \
-	gpg="gpg --expert"
+	gpg="gpg --expert" \
+	ls="ls --color=auto --group-directories-first" \
 
 alias \
 	ka="killall" \
@@ -98,10 +98,10 @@ alias bright="brightnessctl set"
 alias mypy="python3 -m mypy --strict"
 alias venv=". $HOME/.local/share/venv/bin/activate"
 
-if [ "$(uname)" != "Darwin" ]
-then
-	alias git="today git"
-fi
+# if [ "$(uname)" != "Darwin" ]
+# then
+# 	alias git="today git"
+# fi
 
 e() {
 	emacsclient -c "$@" &
