@@ -37,6 +37,10 @@
 (add-hook 'term-mode-hook 'turn-off-company)
 (add-hook 'circe-mode-hook 'turn-off-company)
 
+;; Org
+(require 'org)
+(setq org-startup-indented 1)
+
 ;; Dired
 (setq dired-listing-switches "-l")
 
@@ -47,7 +51,6 @@
 
 
 ;; Gnus
-
 (setq user-mail-address "me@runxiyu.org"
       user-full-name "Runxi Yu"
       smtpmail-smtp-server "mail.runxiyu.org"
@@ -154,7 +157,6 @@ Directory defaults to the value of 'move-file-default-target'."
 (define-key eww-mode-map "G" 'eww-reload)
 (define-key eww-mode-map (kbd "C-x w") 'eww-copy-page-url)
 
-(require 'org)
 					; (add-hook 'org-mode-hook 'turn-on-auto-fill)
 					; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
@@ -167,7 +169,7 @@ Directory defaults to the value of 'move-file-default-target'."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(vterm darkroom magit ivy circe evil company format-all)))
+ '(package-selected-packages '(vterm magit ivy circe evil company format-all)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -176,4 +178,3 @@ Directory defaults to the value of 'move-file-default-target'."
  )
 
 (require 'magit)
-(require 'darkroom)
