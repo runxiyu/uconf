@@ -18,7 +18,7 @@
 (global-set-key (kbd "<f12>") 'buffer-menu)
 
 ;; Font size
-(set-face-attribute 'default nil :height 150 :family "DejaVu Sans Mono") ; hardcoding, because Emacs on OS X doesn't respect fontconfig
+(set-face-attribute 'default nil :height 100 :family "DejaVu Sans Mono") ; hardcoding, because Emacs on OS X doesn't respect fontconfig
 
 ;; Misc
 (load-theme 'deeper-blue)
