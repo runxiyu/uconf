@@ -39,7 +39,10 @@
 
 ;; Org
 (require 'org)
-(setq org-startup-indented 1)
+(setq org-startup-indented 1
+      org-agenda-files '("~/orp/", "~/org/")
+      org-agenda-start-on-weekday 0
+      org-default-notes-file "~/org/index.org")
 
 ;; Dired
 (setq dired-listing-switches "-l")
@@ -88,9 +91,6 @@
       lui-logging-flush-delay 2
       nxml-auto-insert-xml-declaration-flag t
       nxml-slash-auto-complete-flag t
-      org-agenda-files '(".")
-      org-agenda-start-on-weekday 0
-      org-default-notes-file "~/org/index.org"
       org-footnote-define-inline t
       org-latex-default-packages-alist '(("AUTO" "inputenc" t ("pdflatex")) ("T1" "fontenc" t ("pdflatex")) ("" "graphicx" t nil) ("" "longtable" nil nil) ("" "wrapfig" nil nil) ("" "rotating" nil nil) ("normalem" "ulem" t nil) ("" "amsmath" t nil) ("" "amssymb" t nil) ("" "capt-of" nil nil) ("pdfa" "hyperref" nil nil))
       org-latex-image-default-width "\\linewidth"
