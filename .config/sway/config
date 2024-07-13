@@ -31,8 +31,9 @@ exec swayidle -w \
 exec mako
 
 exec /usr/libexec/xdg-desktop-portal-wlr
-exec gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
+exec gnome-keyring-daemon --start --components=gpg
 exec gpg-agent --daemon --default-cache-ttl=3600 --max-cache-ttl 14400
+exec dbus-update-activation-environment --all
 
 exec emacs --daemon
 
