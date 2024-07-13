@@ -1,3 +1,4 @@
+# vim: filetype=gitignore
 .ccls-cache
 compile_commands.json
 \#*#
