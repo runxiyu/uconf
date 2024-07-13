@@ -84,9 +84,9 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
-	ip="ip -color=auto" \
 	gpg="gpg --expert" \
-	ls="ls --color=auto --group-directories-first" \
+	ls="ls --color=auto --group-directories-first"
+#	ip="ip -color=auto"
 
 alias \
 	ka="killall" \
