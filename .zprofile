@@ -71,6 +71,3 @@ export PATH
 #export GOPROXY=https://goproxy.io,direct
 
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
-export QT_ENABLE_HIGHDPI_SCALING=1
-export QT_AUTO_SCREEN_SCALE_FACTOR=1.5
-export QT_SCALE_FACTOR=1.5
