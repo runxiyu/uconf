@@ -7,6 +7,7 @@ Plug 'https://github.com/nvim-treesitter/nvim-treesitter'
 Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/skwee357/nvim-prose'
+Plug 'https://github.com/ethanholz/nvim-lastplace'
 -- Plug 'https://github.com/vim-airline/vim-airline'
 vim.call('plug#end')
 
@@ -123,4 +124,10 @@ require('nvim-prose').setup {
 		words = 'words',
 		minutes = 'min'
 	}
+}
+
+require'nvim-lastplace'.setup {
+	lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
+	lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
+	lastplace_open_folds = true
 }
