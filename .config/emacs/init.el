@@ -40,7 +40,7 @@
 ;; Org
 (require 'org)
 (setq org-startup-indented 1
-      org-agenda-files '("~/orp/", "~/org/")
+      org-agenda-files '("~/orp/" "~/org/")
       org-agenda-start-on-weekday 0
       org-default-notes-file "~/org/index.org")
 
