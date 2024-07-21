@@ -10,8 +10,8 @@ set $right l
 set $wb firefox
 set $term foot
 set $menu dmenu_run
-set $pass passmenu --type
-set $otp otpmenu --type
+set $pass passmenu
+set $otp otpmenu
 set $fm foot -e vifm ~
 set $mail foot -e aerc
 set $emacs emacsclient -c
