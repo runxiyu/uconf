@@ -8,7 +8,7 @@ Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/skwee357/nvim-prose'
 Plug 'https://github.com/ethanholz/nvim-lastplace'
--- Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline'
 vim.call('plug#end')
 
 vim.opt.shortmess:prepend("I")
@@ -18,7 +18,7 @@ vim.opt.undodir	       = os.getenv("HOME") .. "/.local/share/nvim/undo"
 vim.opt.incsearch      = true
 vim.opt.hidden	       = true -- allow background buffers
 vim.opt.laststatus     = 2
-vim.opt.showmode       = true -- set false when using airline
+vim.opt.showmode       = false -- set false when using airline
 vim.opt.timeoutlen     = 50
 vim.opt.mouse	       = ""
 vim.opt.clipboard      = "unnamedplus"
@@ -35,12 +35,12 @@ vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 vim.g.codedark_conservative = 0
 vim.g.codedark_modern       = 1
 vim.g.codedark_italics      = 1
-vim.g.codedark_transparent  = 0
+vim.g.codedark_transparent  = 1
 vim.g.airline_theme         = "codedark"
 vim.opt.background          = "dark"
 vim.opt.guifont             = "monospace:h20"
-vim.cmd.colorscheme('default')
--- vim.cmd.colorscheme('codedark')
+-- vim.cmd.colorscheme('default')
+vim.cmd.colorscheme('codedark')
 -- vim.cmd.colorscheme('vim')
 
 vim.cmd([[
