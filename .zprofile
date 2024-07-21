@@ -45,7 +45,7 @@ export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export DICS="/usr/share/stardict/dic/"
 # export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
-export QT_QPA_PLATFORMTHEME="gtk2"
+export QT_QPA_PLATFORMTHEME="qt6ct"
 export QT_QPA_PLATFORM=wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
 export MOZ_ENABLE_WAYLAND=1
