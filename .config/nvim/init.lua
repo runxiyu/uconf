@@ -57,6 +57,7 @@ require'nvim-treesitter.configs'.setup {
 		-- "bibtex", -- seems broken on commented lines
 		"c",
 		"commonlisp",
+		"comment",
 		"css",
 		"csv",
 		"diff",
