@@ -12,6 +12,7 @@ set $term foot
 set $menu dmenu_run
 set $pass passmenu
 set $otp otpmenu
+set $dmtpl dmtpl
 set $fm foot -e vifm ~
 set $mail foot -e aerc
 set $emacs emacsclient -c
@@ -54,6 +55,7 @@ bindsym $mod+Shift+c kill
 bindsym $mod+Shift+Return exec $menu
 bindsym $mod+p exec $pass
 bindsym $mod+o exec $otp
+bindsym $mod+i exec $dmtpl
 # Use mouse to drag/resize windows
 floating_modifier $mod normal
 bindsym $mod+Shift+r reload
