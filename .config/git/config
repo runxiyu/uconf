@@ -31,6 +31,7 @@
 	annotated = true
 [merge]
 	conflictstyle = diff3
+	tool = vimdiff
 [am]
 	threeWay = true
 [log]
