@@ -9,6 +9,7 @@ Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/skwee357/nvim-prose'
 Plug 'https://github.com/ethanholz/nvim-lastplace'
 Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/mattn/vim-goimports'
 vim.call('plug#end')
 
 vim.opt.shortmess:prepend("I")

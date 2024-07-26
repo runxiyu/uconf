@@ -65,9 +65,17 @@ PLAN9="$HOME"/.local/src/plan9port-master
 export PLAN9
 PATH=$PATH:$PLAN9/bin
 export PATH
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
 
 #export GOPROXY=https://mirrors.aliyun.com/goproxy/
 #export GOPROXY=https://goproxy.io,direct
 
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+# GTK_IM_MODULE=fcitx
+QT_IM_MODULES="wayland;fcitx;ibus"
+XMODIFIERS=@im=fcitx
+INPUT_METHOD=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=fcitx
+
+[ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
