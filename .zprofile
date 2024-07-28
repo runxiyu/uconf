@@ -72,10 +72,10 @@ export PATH
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 # GTK_IM_MODULE=fcitx
-QT_IM_MODULES="wayland;fcitx;ibus"
-XMODIFIERS=@im=fcitx
-INPUT_METHOD=fcitx
-SDL_IM_MODULE=fcitx
-GLFW_IM_MODULE=fcitx
+export QT_IM_MODULES="wayland;fcitx;ibus"
+export XMODIFIERS=@im=fcitx
+export INPUT_METHOD=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=fcitx
 
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
