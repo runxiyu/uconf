@@ -18,7 +18,7 @@
 (global-set-key (kbd "<f12>") 'buffer-menu)
 
 ;; Font size
-(set-face-attribute 'default nil :height 250 :family "DejaVu Sans Mono") ; hardcoding, because Emacs on OS X doesn't respect fontconfig
+(set-face-attribute 'default nil :height 250 :family "monospace") ; hardcoding, because Emacs on OS X doesn't respect fontconfig
 
 ;; Misc
 (load-theme 'deeper-blue)
@@ -175,7 +175,8 @@ Directory defaults to the value of 'move-file-default-target'."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(exwm nov vterm magit ivy circe evil company format-all)))
+ '(package-selected-packages
+   '(nand2tetris exwm nov vterm magit ivy circe evil company format-all)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
