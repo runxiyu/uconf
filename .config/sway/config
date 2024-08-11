@@ -21,8 +21,10 @@ output eDP-1 {
 	resolution 2560x1600
 	scale 1
 	position 0,0
-	bg ~/misc/bg.png fill
+	bg #000000 solid_color
 }
+# bg ~/misc/bg.png fill
+
 
 exec swayidle -w \
          timeout 350 'swaylock -f -c 000000' \
@@ -136,9 +138,9 @@ mode "resize" {
 
 bindsym $mod+t mode "resize"
 
-gaps inner 20
-gaps outer -10
-default_border pixel 1
+gaps inner 15
+gaps outer 0
+default_border pixel 2
 smart_borders no_gaps
 smart_gaps on
 hide_edge_borders none
@@ -148,7 +150,7 @@ client.unfocused #4c4635 #4c4635 #998d6b
 client.focused_inactive #4c4635 #4c4635 #998d6b
 
 bar {
-	font monospace 12
+	font monospace 16
 	position bottom
 	status_command ~/.local/bin/rxbar
 	# status_command while true; do date; sleep 1; done
