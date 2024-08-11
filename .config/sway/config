@@ -21,9 +21,9 @@ output eDP-1 {
 	resolution 2560x1600
 	scale 1
 	position 0,0
-	bg #000000 solid_color
+	bg ~/misc/bg.png fill
 }
-# bg ~/misc/bg.png fill
+# bg #000000 solid_color
 
 
 exec swayidle -w \
