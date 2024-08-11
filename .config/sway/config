@@ -17,7 +17,12 @@ set $fm foot -e vifm ~
 set $mail foot -e aerc
 set $emacs emacsclient -c
 
-output eDP-1 resolution 2560x1600 scale 1 position 0,0 bg ~/misc/bg.png fill
+output eDP-1 {
+	resolution 2560x1600
+	scale 1
+	position 0,0
+	bg ~/misc/bg.png fill
+}
 
 exec swayidle -w \
          timeout 350 'swaylock -f -c 000000' \
@@ -131,12 +136,16 @@ mode "resize" {
 
 bindsym $mod+t mode "resize"
 
-gaps inner 3
-gaps outer 1
-default_border pixel 3
+gaps inner 0
+gaps outer 0
+default_border pixel 1
 smart_borders on
 smart_gaps on
 hide_edge_borders smart
+
+client.focused #998d6b #998d6b #e7d9a0
+client.unfocused #4c4635 #4c4635 #e7d9a0
+client.focused_inactive #4c4635 #4c4635 #e7d9a0
 
 bar {
 	font monospace 9
