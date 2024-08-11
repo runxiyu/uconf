@@ -143,20 +143,23 @@ smart_borders no_gaps
 smart_gaps on
 hide_edge_borders none
 
-client.focused #998d6b #998d6b #e7d9a0
-client.unfocused #4c4635 #4c4635 #e7d9a0
-client.focused_inactive #4c4635 #4c4635 #e7d9a0
+client.focused #998d6b #998d6b #000000
+client.unfocused #4c4635 #4c4635 #998d6b
+client.focused_inactive #4c4635 #4c4635 #998d6b
 
 bar {
-	font monospace 9
-	position top
+	font monospace 12
+	position bottom
 	status_command ~/.local/bin/rxbar
 	# status_command while true; do date; sleep 1; done
 	# status_command while echo "$(cat /sys/class/power_supply/macsmc-battery/capacity)"'%' "$(date +'%w %Y-%m-%d %H:%M:%S')"; do sleep 1; done
 	colors {
-		statusline #ffffff
-		background #323232ff
-		inactive_workspace #323232ff #323232ff #5c5c5c
+		statusline #f9edbb
+		background #000000
+		inactive_workspace #000000 #000000 #f9edbb
+		active_workspace #000000 #000000 #f9edbb
+		focused_workspace #f9edb6 #f9edb6 #000000
+		urgent_workspace #ff0000 #ff0000 #000000
 	}
 }
 
