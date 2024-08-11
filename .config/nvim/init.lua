@@ -8,7 +8,7 @@ Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/skwee357/nvim-prose'
 Plug 'https://github.com/ethanholz/nvim-lastplace'
-Plug 'https://github.com/vim-airline/vim-airline'
+-- Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/mattn/vim-goimports'
 vim.call('plug#end')
 
@@ -33,16 +33,50 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 -- vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
 
-vim.g.codedark_conservative = 0
-vim.g.codedark_modern       = 1
-vim.g.codedark_italics      = 1
-vim.g.codedark_transparent  = 1
-vim.g.airline_theme         = "codedark"
 vim.opt.background          = "dark"
 vim.opt.guifont             = "monospace:h20"
--- vim.cmd.colorscheme('default')
-vim.cmd.colorscheme('codedark')
+vim.cmd.colorscheme('default')
+vim.opt.termguicolors       = false
 -- vim.cmd.colorscheme('vim')
+-- vim.cmd.colorscheme('codedark')
+-- vim.g.codedark_conservative = 0
+-- vim.g.codedark_modern       = 1
+-- vim.g.codedark_italics      = 1
+-- vim.g.codedark_transparent  = 1
+-- vim.g.airline_theme         = "codedark"
+
+vim.cmd([[
+syntax enable
+highlight Normal ctermfg=none ctermbg=none
+highlight NonText ctermfg=none ctermbg=none
+highlight EndOfBuffer ctermfg=none ctermbg=none
+highlight TabLineFill ctermfg=none ctermbg=none
+highlight Search ctermbg=12
+highlight NonText ctermfg=darkgrey
+highlight SpecialKey ctermfg=darkgrey
+highlight clear SignColumn
+highlight Comment cterm=bold ctermfg=none
+highlight StatusLine cterm=none ctermbg=none ctermfg=darkgrey
+highlight StatusLineNC cterm=none ctermbg=none ctermfg=darkgrey
+highlight Title cterm=none ctermfg=darkgrey
+highlight TabLineFill cterm=none
+highlight TabLine cterm=none ctermfg=darkgrey ctermbg=none
+highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
+highlight Todo ctermbg=NONE ctermfg=red cterm=bold
+highlight PreProc ctermfg=grey
+highlight String ctermfg=darkblue cterm=italic
+highlight Type ctermfg=darkblue
+highlight lineNr ctermfg=grey cterm=italic
+highlight cIncluded ctermfg=NONE cterm=bold
+highlight pythonInclude ctermfg=blue
+highlight pythonConditional ctermfg=darkcyan
+highlight pythonBuiltin ctermfg=darkcyan
+highlight Pmenu ctermbg=white ctermfg=black
+highlight PmenuSel ctermbg=darkcyan ctermfg=black
+highlight hareKeyword ctermbg=NONE ctermfg=blue
+highlight hareLabel ctermbg=NONE cterm=bold
+highlight hareType ctermfg=darkcyan
+]])
 
 vim.cmd([[
 let maplocalleader = ','
