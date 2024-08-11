@@ -61,7 +61,7 @@ sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/
 umask 007
 
 
-PLAN9="$HOME"/.local/src/plan9port-master
+PLAN9="$HOME"/ext/plan9port
 export PLAN9
 PATH=$PATH:$PLAN9/bin
 export PATH
@@ -80,5 +80,8 @@ export GLFW_IM_MODULE=fcitx
 export QT_ENABLE_HIGHDPI_SCALING=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_SCALE_FACTOR=1.25
+export MANWIDTH=80
+
+export CVSROOT="$HOME/.local/cvsroot"
 
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
