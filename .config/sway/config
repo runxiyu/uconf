@@ -136,12 +136,12 @@ mode "resize" {
 
 bindsym $mod+t mode "resize"
 
-gaps inner 0
-gaps outer 0
+gaps inner 20
+gaps outer -10
 default_border pixel 1
-smart_borders on
+smart_borders no_gaps
 smart_gaps on
-hide_edge_borders smart
+hide_edge_borders none
 
 client.focused #998d6b #998d6b #e7d9a0
 client.unfocused #4c4635 #4c4635 #e7d9a0
