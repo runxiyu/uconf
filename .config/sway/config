@@ -111,7 +111,7 @@ bindsym $mod+v splitv
 bindsym $mod+y layout tabbed
 bindsym $mod+d layout toggle split
 
-bindsym $mod+f fullscreen
+# bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
 # Swap focus between the tiling area and the floating area
 bindsym $mod+space focus mode_toggle
