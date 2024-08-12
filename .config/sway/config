@@ -53,6 +53,8 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	xkb_layout "uscustom"
 }
 
+bindswitch --locked lid:on exec systemctl suspend
+
 bindsym $mod+Return exec $term
 bindsym $mod+w exec $wb
 bindsym $mod+m exec $mail
