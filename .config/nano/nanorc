@@ -1,3 +1,5 @@
 set nohelp
 set minibar
 include "~/.config/nano/c.nanorc"
+include "~/.config/nano/markdown.nanorc"
+

@@ -13,7 +13,7 @@ function git_branch_name() {
 setopt prompt_subst
 
 # prompt='%B%{$fg[blue]%}[%{$fg[blue]%}%n %{$fg[green]%}%~%{$fg[yellow]%}$(git_branch_name)%{$fg[blue]%}]$%b '
-prompt='%B%{$fg[green]%}%~%{$fg[yellow]%}$(git_branch_name) %{$fg[blue]%}$%b '
+prompt='%(?..%B(%?%)%b )%B%{$fg[green]%}%~%{$fg[yellow]%}$(git_branch_name) %{$fg[blue]%}$%b '
 
 setopt autocd
 stty stop undef
