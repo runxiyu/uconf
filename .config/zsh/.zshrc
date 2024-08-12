@@ -122,3 +122,6 @@ function cd_list() {
 }
 chpwd_functions=(${chpwd_functions[@]} "cd_list")
 
+function c() {
+	cd "$(fzf --walker=dir)"
+}
