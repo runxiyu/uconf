@@ -5,10 +5,9 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/lervag/vimtex'
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter'
 Plug 'https://github.com/neovim/nvim-lspconfig'
-Plug 'https://github.com/tomasiser/vim-code-dark'
-Plug 'https://github.com/skwee357/nvim-prose'
 Plug 'https://github.com/ethanholz/nvim-lastplace'
 -- Plug 'https://github.com/vim-airline/vim-airline'
+-- Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/mattn/vim-goimports'
 vim.call('plug#end')
 
@@ -19,7 +18,7 @@ vim.opt.undodir	       = os.getenv("HOME") .. "/.local/share/nvim/undo"
 vim.opt.incsearch      = true
 vim.opt.hidden	       = true -- allow background buffers
 vim.opt.laststatus     = 2
-vim.opt.showmode       = false -- set false when using airline
+vim.opt.showmode       = true -- set false when using airline
 vim.opt.timeoutlen     = 50
 vim.opt.mouse	       = ""
 vim.opt.clipboard      = "unnamedplus"
@@ -31,11 +30,11 @@ vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
--- vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
+vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
 
+vim.cmd.colorscheme('default')
 vim.opt.background          = "dark"
 vim.opt.guifont             = "monospace:h20"
-vim.cmd.colorscheme('default')
 vim.opt.termguicolors       = false
 -- vim.cmd.colorscheme('vim')
 -- vim.cmd.colorscheme('codedark')
@@ -86,53 +85,10 @@ let leader	   = '\'
 
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = {
-		"ada",
-		"asm",
-		"bash",
-		-- "bibtex", -- seems broken on commented lines
-		"c",
-		"commonlisp",
-		"comment",
-		"css",
-		"csv",
-		"diff",
-		"git_config",   
-		"git_rebase",
-		"go",
-		"gomod",
-		"gosum",
-		"hare",
-		"haskell",
-		"html",
-		"htmldjango",
-		"http",
-		"ini",
-		"javascript",
-		"json",
-		"lua",
-		"make",
-		"markdown",
-		"markdown_inline",
-		"nasm",
-		"passwd",
-		"python",   
-		"r",
-		"racket",
-		"regex",
-		"rst",
-		"rust",
-		"scheme", 
-		"scss",
-		"sql",
-		"ssh_config",
-		"toml",
-		"tsv",
-		"vim",
-		"vimdoc",
-		"xml",
-		"yaml",
+-- "bibtex", -- broken
+		"ada", "asm", "awk", "bash", "cmake", "comment", "commonlisp", "cpp", "c", "css", "csv", "diff", "gitattributes", "gitcommit", "git_config", "gitignore", "git_rebase", "gomod", "go", "gosum", "hare", "haskell", "htmldjango", "html", "http", "ini", "javascript", "json", "lua", "make", "markdown_inline", "markdown", "nasm", "ninja", "org", "passwd", "perl", "python", "racket", "regex", "robots", "r", "rst", "rust", "scheme", "scss", "sql", "ssh_config", "tmux", "toml", "tsv", "typescript", "vimdoc", "vim", "xml", "yaml", "zathurarc",
 	},
-	sync_install = false,
+	sync_install = true,
 	auto_install = true,
 	ignore_install = { "latex", "bibtex" },
 	highlight = {
@@ -153,14 +109,6 @@ require'lspconfig'.ccls.setup{}
 require'lspconfig'.pylsp.setup{}
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.eslint.setup{}
-require('nvim-prose').setup {
-	wpm = 200.0,
-	filetypes = { 'markdown' },
-	placeholders = {
-		words = 'words',
-		minutes = 'min'
-	}
-}
 
 require'nvim-lastplace'.setup {
 	lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
