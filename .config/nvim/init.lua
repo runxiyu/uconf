@@ -30,7 +30,6 @@ vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
-vim.keymap.set({"n", "i"}, "<C-M>", ":keepp /<++><CR>ca<")
 
 vim.cmd.colorscheme('default')
 vim.opt.background          = "dark"
