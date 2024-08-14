@@ -153,7 +153,7 @@ client.focused_inactive #4c4635 #4c4635 #998d6b
 
 bar {
 	font monospace 16
-	position bottom
+	position top
 	status_command ~/.local/bin/rxbar
 	mode hide
 	# status_command while true; do date; sleep 1; done
