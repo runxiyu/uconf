@@ -9,7 +9,9 @@ Plug 'https://github.com/ethanholz/nvim-lastplace'
 -- Plug 'https://github.com/vim-airline/vim-airline'
 -- Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/mattn/vim-goimports'
+Plug 'junegunn/vim-easy-align'
 vim.call('plug#end')
+
 
 vim.opt.shortmess:prepend("I")
 vim.opt.undofile       = true
@@ -20,7 +22,7 @@ vim.opt.hidden	       = true -- allow background buffers
 vim.opt.laststatus     = 2
 vim.opt.showmode       = true -- set false when using airline
 vim.opt.timeoutlen     = 50
-vim.opt.mouse	       = ""
+vim.opt.mouse	       = "a"
 vim.opt.clipboard      = "unnamedplus"
 
 vim.g.vimtex_view_method = "zathura"

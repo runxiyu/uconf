@@ -92,8 +92,11 @@ alias \
 	ka="killall" \
 	g="git" \
 	sdn="sudo shutdown -h now" \
-	v="$EDITOR" \
-	z="zathura"
+	v="$EDITOR"
+
+z() {
+	zathura "$@" & disown
+}
 
 alias fzo="fzf | xargs -d $'\n' xdg-open"
 alias bright="brightnessctl set"
