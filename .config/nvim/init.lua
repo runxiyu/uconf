@@ -116,3 +116,18 @@ require'nvim-lastplace'.setup {
 	lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
 	lastplace_open_folds = true
 }
+
+-- require("nvim-treesitter.parsers").get_parser_configs().scfg = {
+-- 	install_info = {
+-- 		url = "https://git.sr.ht/~rockorager/tree-sitter-scfg",
+-- 		files = {"src/parser.c"},
+-- 	},
+-- 	filetype = "scfg",
+-- 	requires_generate_from_grammar = true,
+-- }
+-- 
+-- vim.filetype.add({
+-- 	extension = {
+-- 		scfg = "scfg",
+-- 	}
+-- })
