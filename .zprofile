@@ -58,7 +58,7 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
 
-umask 007
+# umask 007
 
 
 PLAN9="$HOME"/ext/plan9port
@@ -83,8 +83,6 @@ export QT_SCALE_FACTOR=1.25
 export MANWIDTH=80
 
 export CVSROOT="$HOME/.local/cvsroot"
+test -r /home/runxiyu/.opam/opam-init/init.sh && . /home/runxiyu/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
-
-# opam configuration
-test -r /home/runxiyu/.opam/opam-init/init.sh && . /home/runxiyu/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

@@ -56,7 +56,7 @@ syntax enable
 " highlight SpecialKey ctermfg=darkgrey
 " highlight clear SignColumn
 highlight Comment cterm=none ctermfg=darkgrey
-" highlight StatusLine cterm=none ctermbg=none ctermfg=darkgrey
+highlight StatusLine cterm=none ctermbg=none ctermfg=lightgrey
 " highlight StatusLineNC cterm=none ctermbg=none ctermfg=darkgrey
 " highlight Title cterm=none ctermfg=darkgrey
 " highlight TabLineFill cterm=none
