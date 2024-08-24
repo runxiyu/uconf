@@ -9,8 +9,8 @@
 (scroll-bar-mode -1)
 (blink-cursor-mode -1)
 (save-place-mode 1)
-(require 'ivy)
-(ivy-mode 1)
+; (require 'ivy)
+; (ivy-mode 1)
 (setq custom-safe-themes t)
 (load-file "~/.config/emacs/runxiyu-theme-theme.el")
 (load-theme 'runxiyu-theme)
@@ -56,9 +56,23 @@
       c-basic-offset 8
       tab-width 8
       indent-tabs-mode t)
+(setq custom-tab-width 8)
+(defun disable-tabs () (interactive) (setq indent-tabs-mode nil))
+(defun enable-tabs  () (interactive)
+  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+  (setq indent-tabs-mode t)
+  (setq tab-width custom-tab-width))
+(add-hook 'prog-mode-hook 'enable-tabs)
+(add-hook 'text-mode-hook 'enable-tabs)
+(add-hook 'lisp-mode-hook 'disable-tabs)
+(add-hook 'emacs-lisp-mode-hook 'disable-tabs)
+(setq-default electric-indent-inhibit t)
+(setq backward-delete-char-untabify-method 'hungry)
+
 
 ;; IRC
 (require 'circe)
+(setq lui-fill-column 85)
 (setq my-credentials-file "~/.local/share/secrets/irc.el")
 (defun my-znc-password (server)
   (with-temp-buffer
@@ -97,5 +111,5 @@
 
 
 ;; Warnings
-(setq warning-minimum-level :emergency) ; bad practice but meh
+; (setq warning-minimum-level :emergency) ; bad practice but meh
 
