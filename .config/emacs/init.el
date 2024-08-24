@@ -51,6 +51,12 @@
       major-mode-remap-alist '((c-mode . c-ts-mode)
                                (cpp-mode . cpp-ts-mode)))
 
+;; Indentation
+(setq c-default-style "linux"
+      c-basic-offset 8
+      tab-width 8
+      indent-tabs-mode t)
+
 ;; IRC
 (require 'circe)
 (setq my-credentials-file "~/.local/share/secrets/irc.el")
