@@ -2,6 +2,7 @@
 (set-face-attribute 'default nil :height 180 :family "monospace")
 (add-to-list 'default-frame-alist '(undecorated . t))
 (global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
 (setq use-dialog-box nil)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
