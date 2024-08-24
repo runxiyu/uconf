@@ -85,4 +85,4 @@ export MANWIDTH=80
 export CVSROOT="$HOME/.local/cvsroot"
 test -r /home/runxiyu/.opam/opam-init/init.sh && . /home/runxiyu/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
+# [ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway

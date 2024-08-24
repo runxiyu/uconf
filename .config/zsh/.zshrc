@@ -126,3 +126,5 @@ function cd_list() {
 chpwd_functions=(${chpwd_functions[@]} "cd_list")
 
 . <(fzf --zsh)
+alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
+alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
