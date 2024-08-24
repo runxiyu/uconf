@@ -11,6 +11,9 @@
 (save-place-mode 1)
 (require 'ivy)
 (ivy-mode 1)
+(setq custom-safe-themes t)
+(load-file "~/.config/emacs/runxiyu-theme-theme.el")
+(load-theme 'runxiyu-theme)
 ; (load-theme 'wheatgrass)
 ; (load-theme 'adwaita)
 
@@ -23,10 +26,10 @@
 (package-initialize)
 
 ;; Pinyin
-(with-no-warnings (require 'pyim)
-                  (require 'pyim-basedict)
-                  (pyim-basedict-enable)
-                  (setq default-input-method "pyim"))
+; (with-no-warnings (require 'pyim)
+;                   (require 'pyim-basedict)
+;                   (pyim-basedict-enable)
+;                   (setq default-input-method "pyim"))
 
 ;; Org
 (require 'org)
@@ -78,7 +81,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(circe pyim-basedict pyim pinyin vterm magit sly markdown-mode paredit ivy)))
+   '(solarized-theme circe pyim-basedict pyim pinyin vterm magit sly markdown-mode paredit ivy)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
