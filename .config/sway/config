@@ -159,7 +159,7 @@ bar {
 	# status_command while true; do date; sleep 1; done
 	# status_command while echo "$(cat /sys/class/power_supply/macsmc-battery/capacity)"'%' "$(date +'%w %Y-%m-%d %H:%M:%S')"; do sleep 1; done
 	colors {
-		statusline #f9edbb
+		statusline #777777
 		background #222222
 		inactive_workspace #222222 #222222 #777777
 		active_workspace #222222 #222222 #777777

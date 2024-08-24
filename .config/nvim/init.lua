@@ -10,6 +10,7 @@ Plug 'https://github.com/ethanholz/nvim-lastplace'
 -- Plug 'https://github.com/tomasiser/vim-code-dark'
 Plug 'https://github.com/mattn/vim-goimports'
 Plug 'junegunn/vim-easy-align'
+Plug 'glacambre/firenvim'
 vim.call('plug#end')
 
 
@@ -35,7 +36,7 @@ vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 
 vim.cmd.colorscheme('default')
 vim.opt.background          = "dark"
-vim.opt.guifont             = "monospace:h20"
+-- vim.opt.guifont             = "monospace:h20"
 vim.opt.termguicolors       = false
 -- vim.cmd.colorscheme('vim')
 -- vim.cmd.colorscheme('codedark')
