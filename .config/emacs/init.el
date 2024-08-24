@@ -22,9 +22,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; Warnings
-(setq warning-minimum-level :emergency) ; bad practice but meh
-
 ;; Pinyin
 (with-no-warnings (require 'pyim)
                   (require 'pyim-basedict)
@@ -51,6 +48,26 @@
       major-mode-remap-alist '((c-mode . c-ts-mode)
                                (cpp-mode . cpp-ts-mode)))
 
+;; IRC
+(require 'circe)
+(setq my-credentials-file "~/.local/share/secrets/irc.el")
+(defun my-znc-password (server)
+  (with-temp-buffer
+    (insert-file-contents-literally my-credentials-file)
+    (plist-get (read (buffer-string)) :pass)))
+(setq circe-networks '(("libera"
+		       :host "irc.runxiyu.org"
+		       :port 26697
+		       :user "runxiyu/libera"
+		       :pass my-znc-password
+		       :use-tls t)
+		      ("rx"
+		       :host "irc.runxiyu.org"
+		       :port 26697
+		       :user "runxiyu/rx"
+		       :pass my-znc-password
+		       :use-tls t)))
+
 ;; Server
 (server-start)
 
@@ -61,10 +78,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(pyim-basedict pyim pinyin vterm magit sly markdown-mode paredit ivy)))
+   '(circe pyim-basedict pyim pinyin vterm magit sly markdown-mode paredit ivy)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+;; Warnings
+(setq warning-minimum-level :emergency) ; bad practice but meh
+
