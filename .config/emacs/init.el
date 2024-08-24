@@ -176,7 +176,7 @@ Directory defaults to the value of 'move-file-default-target'."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(ccls tree-sitter-langs lsp-mode tree-sitter nand2tetris exwm nov vterm magit ivy circe evil company format-all)))
+   '(paredit ccls tree-sitter-langs lsp-mode tree-sitter nand2tetris exwm nov vterm magit ivy circe evil company format-all)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
