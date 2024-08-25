@@ -46,6 +46,11 @@ vim.opt.termguicolors       = false
 -- vim.g.codedark_transparent  = 1
 -- vim.g.airline_theme         = "codedark"
 
+if vim.g.started_by_firenvim == true then
+	vim.g.firenvim_config.localSettings['.*'] = { takeover = 'never', priority = 10 }
+	vim.o.laststatus = 0
+end
+
 vim.cmd([[
 syntax enable
 " highlight Normal ctermfg=none ctermbg=none

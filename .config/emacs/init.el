@@ -12,10 +12,16 @@
 ; (require 'ivy)
 ; (ivy-mode 1)
 (setq custom-safe-themes t)
-(load-file "~/.config/emacs/runxiyu-theme-theme.el")
-(load-theme 'runxiyu-theme)
-; (load-theme 'wheatgrass)
+; (load-file "~/.config/emacs/runxiyu-theme-theme.el")
+; (load-theme 'runxiyu-theme)
+(load-theme 'wheatgrass)
 ; (load-theme 'adwaita)
+
+;; Evil
+(setq evil-undo-system 'undo-redo
+      evil-want-fine-undo t)
+(require 'evil)
+(evil-mode 1)
 
 ;; Embed wayland
 (defun sway () (interactive) (call-process "sway"))
@@ -72,7 +78,7 @@
 
 ;; IRC
 (require 'circe)
-(setq lui-fill-column 85)
+(setq lui-fill-column 90)
 (setq my-credentials-file "~/.local/share/secrets/irc.el")
 (defun my-znc-password (server)
   (with-temp-buffer
@@ -91,23 +97,11 @@
 		       :pass my-znc-password
 		       :use-tls t)))
 
+;; Dired
+(setq dired-listing-switches "-l")
+
 ;; Server
 (server-start)
-
-;; Others
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(solarized-theme circe pyim-basedict pyim pinyin vterm magit sly markdown-mode paredit ivy)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 
 ;; Warnings
