@@ -1,5 +1,7 @@
 # vim: filetype=swayconfig
 
+xwayland disable
+
 set $mod Mod4
 
 set $left h
@@ -31,14 +33,13 @@ exec swayidle -w \
          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -c 000000'
 
-exec dunst
-
-exec /usr/libexec/xdg-desktop-portal-wlr
-exec fcitx5 -d --replace
-exec gnome-keyring-daemon --start --components=gpg
-exec gpg-agent --daemon --default-cache-ttl=3600 --max-cache-ttl 14400
-exec dbus-update-activation-environment --all
-exec emacs --daemon
+# exec dunst
+# exec /usr/libexec/xdg-desktop-portal-wlr
+# exec fcitx5 -d --replace
+# exec gnome-keyring-daemon --start --components=gpg
+# exec gpg-agent --daemon --default-cache-ttl=3600 --max-cache-ttl 14400
+# exec dbus-update-activation-environment --all
+# exec emacs --daemon
 
 output DP-2 subpixel none
 output LVDS-1 subpixel none
@@ -53,7 +54,7 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	xkb_layout "uscustom"
 }
 
-bindswitch --locked lid:on exec systemctl suspend
+# bindswitch --locked lid:on exec systemctl suspend # TODO
 
 bindsym $mod+Return exec $term
 bindsym $mod+w exec $wb
