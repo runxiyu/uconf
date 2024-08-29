@@ -18,6 +18,7 @@ set $dmtpl dmtpl
 set $fm foot -e vifm ~
 set $mail foot -e aerc
 set $emacs emacsclient -c
+set $rxmenu rxmenu
 
 output eDP-1 {
 	resolution 2560x1600
@@ -54,9 +55,10 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	xkb_layout "uscustom"
 }
 
-# bindswitch --locked lid:on exec systemctl suspend # TODO
+bindswitch --locked lid:on exec loginctl suspend -i
 
 bindsym $mod+Return exec $term
+bindsym $mod+u exec $rxmenu
 bindsym $mod+w exec $wb
 bindsym $mod+m exec $mail
 bindsym $mod+e exec $emacs
