@@ -1,6 +1,6 @@
 # vim: filetype=swayconfig
 
-xwayland disable
+# xwayland disable
 
 set $mod Mod4
 
@@ -15,7 +15,7 @@ set $menu dmenu_run
 set $pass passmenu
 set $otp otpmenu
 set $dmtpl dmtpl
-set $fm foot -e vifm ~
+set $fm foot -e lf ~
 set $mail foot -e aerc
 set $emacs emacsclient -c
 set $rxmenu rxmenu
