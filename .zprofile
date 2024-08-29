@@ -9,7 +9,7 @@ fi
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/share/go/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/infr/rxmenus:$PATH"
+export PATH="$HOME/infrastructure/rxmenus:$PATH"
 export PATH="$HOME/misc:$PATH"
 unsetopt PROMPT_SP
 export EDITOR="nvim"
