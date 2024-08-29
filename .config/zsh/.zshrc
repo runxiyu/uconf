@@ -1,3 +1,5 @@
+
+
 autoload -U colors && colors
 
 function git_branch_name() {
@@ -69,7 +71,6 @@ export GPG_TTY=$(tty)
 
 alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
 
-alias vim="nvim" vimdiff="nvim -d"
 alias mbsync="mbsync -c $MBSYNCRC"
 
 alias \
@@ -128,3 +129,13 @@ chpwd_functions=(${chpwd_functions[@]} "cd_list")
 . <(fzf --zsh)
 alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
 alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
+
+fpath=($HOME/.config/zsh/fpath $fpath)
+autoload -U compinit
+compinit
+
+lfcd () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}
+bindkey -s '^o' 'lfcd\n'
