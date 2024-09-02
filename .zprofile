@@ -1,6 +1,8 @@
 #!/bin/zsh
 # Shouldn't actually be run directly, obviously
 
+ulimit -c unlimited
+
 export PATH="$HOME/.local/share/npm/bin:$PATH"
 if [ -d "/opt/homebrew/bin" ]
 then
