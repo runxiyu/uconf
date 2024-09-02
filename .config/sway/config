@@ -15,7 +15,7 @@ set $menu dmenu_run
 set $pass passmenu
 set $otp otpmenu
 set $dmtpl dmtpl
-set $fm foot -e lf ~
+set $fm foot -e vifm ~
 set $mail foot -e aerc
 set $emacs emacsclient -c
 set $rxmenu rxmenu
@@ -55,7 +55,7 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	xkb_layout "uscustom"
 }
 
-bindswitch --locked lid:on exec loginctl suspend -i
+# bindswitch --locked lid:on exec loginctl suspend -i
 
 bindsym $mod+Return exec $term
 bindsym $mod+u exec $rxmenu
