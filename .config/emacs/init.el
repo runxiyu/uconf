@@ -1,6 +1,11 @@
+;; Packages
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
 ;; Basics
-(set-face-attribute 'default nil :height 180 :family "monospace")
-(add-to-list 'default-frame-alist '(undecorated . t))
+(set-face-attribute 'default nil :height 160 :family "DejaVu Sans Mono")
+; (add-to-list 'default-frame-alist '(undecorated . t))
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 (setq use-dialog-box nil)
@@ -9,13 +14,14 @@
 (scroll-bar-mode -1)
 (blink-cursor-mode -1)
 (save-place-mode 1)
+(fringe-mode 0)
 ; (require 'ivy)
 ; (ivy-mode 1)
 (setq custom-safe-themes t)
 ; (load-file "~/.config/emacs/runxiyu-theme-theme.el")
 ; (load-theme 'runxiyu-theme)
-(load-theme 'wheatgrass)
-; (load-theme 'adwaita)
+; (load-theme 'wheatgrass)
+(load-theme 'adwaita)
 
 ;; Evil
 (setq evil-undo-system 'undo-redo
@@ -25,11 +31,6 @@
 
 ;; Embed wayland
 (defun sway () (interactive) (call-process "sway"))
-
-;; Packages
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
 
 ;; Pinyin
 ; (with-no-warnings (require 'pyim)
@@ -53,6 +54,7 @@
 ;; Tree sitter
 (setq treesit-language-source-alist '((c "https://github.com/tree-sitter/tree-sitter-c")
                                       (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
+                                      (go "https://github.com/tree-sitter/tree-sitter-go")
                                       (markdown "https://github.com/tree-sitter-grammars/tree-sitter-markdown"))
       major-mode-remap-alist '((c-mode . c-ts-mode)
                                (cpp-mode . cpp-ts-mode)))
@@ -113,7 +115,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(darkroom gameoflife xresources-theme vterm vscode-dark-plus-theme solarized-theme sly pyim-basedict pyim pinyin paredit markdown-mode magit ivy helm exwm evil circe)))
+   '(go darkroom gameoflife xresources-theme vterm vscode-dark-plus-theme solarized-theme sly pyim-basedict pyim pinyin paredit markdown-mode magit ivy helm exwm evil circe)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
