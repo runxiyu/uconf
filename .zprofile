@@ -88,4 +88,12 @@ export MANWIDTH=80
 export CVSROOT="$HOME/.local/cvsroot"
 test -r /home/runxiyu/.opam/opam-init/init.sh && . /home/runxiyu/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export LC_CTYPE=en_US.UTF-8
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+
 # [ "$(tty)" = "/dev/tty1" ] && ! pidof -s sway >/dev/null 2>&1 && exec dbus-run-session -- sway
+
