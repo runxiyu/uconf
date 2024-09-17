@@ -35,8 +35,8 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 
 vim.cmd.colorscheme('default')
-vim.opt.background          = "dark"
--- vim.opt.guifont             = "monospace:h20"
+vim.opt.background          = "light"
+vim.opt.guifont             = "DejaVu Sans Mono:h16"
 vim.opt.termguicolors       = false
 -- vim.cmd.colorscheme('vim')
 -- vim.cmd.colorscheme('codedark')
@@ -61,14 +61,14 @@ syntax enable
 " highlight NonText ctermfg=darkgrey
 " highlight SpecialKey ctermfg=darkgrey
 " highlight clear SignColumn
-highlight Comment cterm=none ctermfg=darkgrey
-highlight StatusLine cterm=none ctermbg=none ctermfg=lightgrey
+highlight Comment cterm=none ctermfg=darkgrey guifg=darkgrey
+highlight StatusLine cterm=none ctermbg=none ctermfg=lightgrey guifg=lightgrey
 " highlight StatusLineNC cterm=none ctermbg=none ctermfg=darkgrey
 " highlight Title cterm=none ctermfg=darkgrey
 " highlight TabLineFill cterm=none
 " highlight TabLine cterm=none ctermfg=darkgrey ctermbg=none
 " highlight ColorColumn ctermbg=darkgrey guibg=lightgrey
-highlight Todo ctermbg=NONE ctermfg=red cterm=bold
+highlight Todo ctermbg=NONE ctermfg=red cterm=bold guifg=red gui=bold
 " highlight PreProc ctermfg=grey
 " highlight String ctermfg=darkblue cterm=italic
 " highlight Type ctermfg=darkblue
