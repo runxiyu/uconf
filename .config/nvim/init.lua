@@ -113,9 +113,9 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require'lspconfig'.ccls.setup{}
-require'lspconfig'.pylsp.setup{}
+-- require'lspconfig'.pylsp.setup{}
 require'lspconfig'.gopls.setup{}
-require'lspconfig'.eslint.setup{}
+-- require'lspconfig'.eslint.setup{}
 
 require'nvim-lastplace'.setup {
 	lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
