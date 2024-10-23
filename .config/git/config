@@ -1,0 +1,5 @@
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[user]
+	name = Runxi Yu
+	email = me@runxiyu.org
