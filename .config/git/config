@@ -3,3 +3,9 @@
 [user]
 	name = Runxi Yu
 	email = me@runxiyu.org
+[commit]
+	verbose = true
+	gpgSign = true
+[tag]
+	annotate = true
+	gpgSign = true
