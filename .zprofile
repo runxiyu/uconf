@@ -14,6 +14,7 @@ elif [ "$(uname)" = "Linux" ]; then
 	export GDK_BACKEND="wayland"
 fi
 
+export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export EDITOR="nvim"
