@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export PATH="$(printf '%s' "$PATH" | sed "$(printf 's/%s\/bin://g' "$(printf '%s' "$HOME" | sed 's:/:\\/:g')")")"
+
+iamb -C "$XDG_CONFIG_HOME"
