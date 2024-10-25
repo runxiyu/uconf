@@ -9,3 +9,5 @@ function git {
 }
 
 alias uconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
+
+alias ls="ls --color=auto"
