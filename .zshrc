@@ -43,6 +43,8 @@ function uconf {
 	elif [[ "$1" == "branch" ]]; then
 		shift 1
 		rawuconf branch "$@"
+	elif [[ -z "$1" ]]; then
+		rawuconf status
 	else
 		printf '%s: unknown command %s\n' "$0" "$1" >&2
 	fi
