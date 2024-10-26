@@ -9,3 +9,5 @@
 [tag]
 	annotate = true
 	gpgSign = true
+[core]
+	excludesfile = ~/.config/git/info/exclude
