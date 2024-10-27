@@ -1,0 +1,173 @@
+# vim: filetype=swayconfig
+
+# xwayland disable
+
+set $mod Mod4
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $wb firefox
+set $term foot
+set $menu dmenu_run
+set $pass passmenu
+set $otp otpmenu
+set $dmtpl dmtpl
+set $fm foot -e vifm ~
+set $mail foot -e aerc
+set $emacs emacsclient -c
+set $rxmenu rxmenu
+
+output eDP-1 {
+	resolution 2560x1600
+	scale 1.5
+	position 0,0
+	bg #000000 solid_color
+}
+
+
+exec swayidle -w \
+         timeout 350 'swaylock -f -c 000000' \
+         timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+# exec dunst
+# exec /usr/libexec/xdg-desktop-portal-wlr
+# exec fcitx5 -d --replace
+# exec gnome-keyring-daemon --start --components=gpg
+# exec gpg-agent --daemon --default-cache-ttl=3600 --max-cache-ttl 14400
+# exec dbus-update-activation-environment --all
+# exec emacs --daemon
+
+output DP-2 subpixel none
+output LVDS-1 subpixel none
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+	xkb_layout "gb"
+}
+
+input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
+	tap disabled
+	natural_scroll enabled
+	xkb_layout "us"
+}
+
+# bindswitch --locked lid:on exec loginctl suspend -i
+
+bindsym $mod+Return exec $term
+bindsym $mod+u exec $rxmenu
+bindsym $mod+w exec $wb
+bindsym $mod+m exec $mail
+bindsym $mod+e exec $emacs
+bindsym $mod+r exec $fm
+bindsym $mod+Shift+c kill
+bindsym $mod+Shift+Return exec $menu
+bindsym $mod+p exec $pass
+bindsym $mod+o exec $otp
+bindsym $mod+i exec $dmtpl
+# Use mouse to drag/resize windows
+floating_modifier $mod normal
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+q exec swaymsg exit
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+bindsym $mod+b splith
+bindsym $mod+v splitv
+# bindsym $mod+s layout stacking
+# bindsym $mod+s layout default
+bindsym $mod+y layout tabbed
+bindsym $mod+d layout toggle split
+
+# bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+
+# bindsym $mod+Shift+minus move scratchpad
+# bindsym $mod+minus scratchpad show
+
+mode "resize" {
+	bindsym $left resize shrink width 10px
+	bindsym $down resize grow height 10px
+	bindsym $up resize shrink height 10px
+	bindsym $right resize grow width 10px
+	bindsym Left resize shrink width 10px
+	bindsym Down resize grow height 10px
+	bindsym Up resize shrink height 10px
+	bindsym Right resize grow width 10px
+	
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+bindsym $mod+t mode "resize"
+
+gaps inner 15
+gaps outer 0
+default_border pixel 2
+smart_borders no_gaps
+smart_gaps on
+hide_edge_borders none
+
+client.focused #998d6b #998d6b #000000
+client.unfocused #4c4635 #4c4635 #998d6b
+client.focused_inactive #4c4635 #4c4635 #998d6b
+
+bar {
+	font monospace 12
+	position top
+	status_command ~/.local/bin/rxbar
+	mode dock
+	# status_command while true; do date; sleep 1; done
+	# status_command while echo "$(cat /sys/class/power_supply/macsmc-battery/capacity)"'%' "$(date +'%w %Y-%m-%d %H:%M:%S')"; do sleep 1; done
+	colors {
+		statusline #777777
+		background #222222
+		inactive_workspace #222222 #222222 #777777
+		active_workspace #222222 #222222 #777777
+		focused_workspace #777777 #777777 #222222
+		urgent_workspace #ff0000 #ff0000 #222222
+	}
+}
+
+include /etc/sway/config.d/*
