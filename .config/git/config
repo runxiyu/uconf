@@ -11,3 +11,5 @@
 	gpgSign = true
 [core]
 	excludesfile = ~/.config/git/info/exclude
+[pull]
+	rebase = true
