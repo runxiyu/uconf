@@ -100,6 +100,9 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
+bindsym XF86MonBrightnessDown exec brightnessctl s 8%-
+bindsym XF86MonBrightnessUp exec brightnessctl s 8%+
+
 gaps inner 10
 gaps outer -3
 default_border pixel 1
