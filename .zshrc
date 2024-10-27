@@ -55,3 +55,5 @@ alias ls="ls --color=auto"
 PS1="%~ %# "
 
 export GPG_TTY="$(tty)"
+
+source <(fzf --zsh)
