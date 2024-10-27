@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -x
+
+"/usr/bin/$(basename -- "$0")" -f 'monospace 12.5'
