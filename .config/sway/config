@@ -35,6 +35,7 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	tap disabled
 	natural_scroll enabled
 	xkb_layout "us"
+	xkb_options "caps:backspace"
 }
 
 bindsym $mod+Return exec $term
