@@ -2,4 +2,4 @@
 
 set -x
 
-"/usr/bin/$(basename -- "$0")" -f 'monospace 12.5'
+"/usr/bin/$(basename -- "$0")" -f 'monospace 13'
