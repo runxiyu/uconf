@@ -4,8 +4,15 @@
 (package-initialize)
 
 ;; Basics
-(set-face-attribute 'default nil :height 160 :family "DejaVu Sans Mono")
-; (add-to-list 'default-frame-alist '(undecorated . t))
+(set-face-attribute 'default
+                    nil
+                    :height 160
+                    :family "DejaVu Sans Mono")
+(set-face-attribute 'variable-pitch
+                    nil
+                    :height 160
+                    :family "Century Schoolbook")
+					; (add-to-list 'default-frame-alist '(undecorated . t))
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 (setq use-dialog-box nil)
@@ -15,17 +22,21 @@
 (blink-cursor-mode -1)
 (save-place-mode 1)
 (fringe-mode 0)
+
+;; Ivy
 (require 'ivy)
 (ivy-mode 1)
+
+;; Themes
 (setq custom-safe-themes t)
 (load-theme 'wheatgrass)
-; (load-theme 'adwaita)
+;; (load-theme 'adwaita)
 
 ;; Evil
-; (setq evil-undo-system 'undo-redo
-;       evil-want-fine-undo t)
-; (require 'evil)
-; (evil-mode 1)
+;; (setq evil-undo-system 'undo-redo
+;;       evil-want-fine-undo t)
+;; (require 'evil)
+;; (evil-mode 1)
 
 ;; Undo
 (require 'undo-tree)
@@ -35,10 +46,10 @@
 (defun sway () (interactive) (call-process "sway"))
 
 ;; Pinyin
-; (with-no-warnings (require 'pyim)
-;                   (require 'pyim-basedict)
-;                   (pyim-basedict-enable)
-;                   (setq default-input-method "pyim"))
+;; (with-no-warnings (require 'pyim)
+;;                   (require 'pyim-basedict)
+;;                   (pyim-basedict-enable)
+;;                   (setq default-input-method "pyim"))
 
 ;; Org
 (require 'org)
@@ -61,22 +72,23 @@
                                (cpp-mode . cpp-ts-mode)))
 
 ;; Indentation
-(setq c-default-style "linux"
-      c-basic-offset 8
-      tab-width 8
-      indent-tabs-mode t)
-(setq custom-tab-width 8)
-(defun disable-tabs () (interactive) (setq indent-tabs-mode nil))
-(defun enable-tabs  () (interactive)
-  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
-  (setq indent-tabs-mode t)
-  (setq tab-width custom-tab-width))
-(add-hook 'prog-mode-hook 'enable-tabs)
-(add-hook 'text-mode-hook 'enable-tabs)
-(add-hook 'lisp-mode-hook 'disable-tabs)
-(add-hook 'emacs-lisp-mode-hook 'disable-tabs)
-(setq-default electric-indent-inhibit t)
-(setq backward-delete-char-untabify-method 'hungry)
+;; (setq c-default-style "linux"
+;;       c-basic-offset 8
+;;       tab-width 8
+;;       indent-tabs-mode t)
+;; (setq custom-tab-width 8)
+;; (defun disable-tabs () (interactive)
+;;        (setq indent-tabs-mode nil))
+;; (defun enable-tabs () (interactive)
+;;        (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+;;        (setq indent-tabs-mode t)
+;;        (setq tab-width custom-tab-width))
+;; (add-hook 'prog-mode-hook 'enable-tabs)
+;; (add-hook 'text-mode-hook 'enable-tabs)
+;; (add-hook 'lisp-mode-hook 'disable-tabs)
+;; (add-hook 'emacs-lisp-mode-hook 'disable-tabs)
+;; (setq-default electric-indent-inhibit t)
+;; (setq backward-delete-char-untabify-method 'hungry)
 
 
 ;; IRC
@@ -88,17 +100,17 @@
     (insert-file-contents-literally my-credentials-file)
     (plist-get (read (buffer-string)) :pass)))
 (setq circe-networks '(("libera"
-		       :host "irc.runxiyu.org"
-		       :port 26697
-		       :user "runxiyu/libera"
-		       :pass my-znc-password
-		       :use-tls t)
-		      ("rx"
-		       :host "irc.runxiyu.org"
-		       :port 26697
-		       :user "runxiyu/rx"
-		       :pass my-znc-password
-		       :use-tls t)))
+			:host "irc.runxiyu.org"
+			:port 26697
+			:user "runxiyu/libera"
+			:pass my-znc-password
+			:use-tls t)
+		       ("rx"
+			:host "irc.runxiyu.org"
+			:port 26697
+			:user "runxiyu/rx"
+			:pass my-znc-password
+			:use-tls t)))
 
 ;; Dired
 (setq dired-listing-switches "-l")
@@ -108,7 +120,7 @@
 
 
 ;; Warnings
-; (setq warning-minimum-level :emergency) ; bad practice but meh
+;; (setq warning-minimum-level :emergency) ; bad practice but meh
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

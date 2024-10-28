@@ -1,3 +1,10 @@
+if [ "$(uname)" = "Darwin" ]; then
+	alias pkg='brew'
+elif [ "$(uname)" = "Linux" ]; then
+	alias pkg='sudo dnf'
+fi
+
+
 # Verbose push
 function git {
 	if [[ "$1" == "push" && "$@" != *"--help"* ]]; then
