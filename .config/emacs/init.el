@@ -128,7 +128,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(undo-tree fzf go darkroom gameoflife xresources-theme vterm vscode-dark-plus-theme solarized-theme sly pyim-basedict pyim pinyin paredit markdown-mode magit ivy helm exwm evil circe)))
+   '(maxima vterm-toggle undo-tree fzf go darkroom vterm sly magit ivy circe)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
