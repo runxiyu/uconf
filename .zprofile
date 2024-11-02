@@ -10,6 +10,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 if [ "$(uname)" = "Darwin" ]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 	export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+	export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 elif [ "$(uname)" = "Linux" ]; then
 	export GDK_BACKEND="wayland"
 fi

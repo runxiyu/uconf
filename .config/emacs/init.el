@@ -17,7 +17,10 @@
 (global-unset-key (kbd "C-x C-z"))
 (setq use-dialog-box nil)
 (tool-bar-mode -1)
-(menu-bar-mode -1)
+(if (not (eq system-type 'darwin))
+    (menu-bar-mode -1)
+  (menu-bar-mode 1))
+
 (scroll-bar-mode -1)
 (blink-cursor-mode -1)
 (save-place-mode 1)
@@ -29,7 +32,7 @@
 
 ;; Themes
 (setq custom-safe-themes t)
-(load-theme 'wheatgrass)
+;; (load-theme 'wheatgrass)
 ;; (load-theme 'adwaita)
 
 ;; Evil
