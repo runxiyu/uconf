@@ -11,17 +11,17 @@ Plug 'https://github.com/ibhagwan/fzf-lua'
 vim.call('plug#end')
 
 vim.opt.shortmess:prepend("IrCFlotTO")
-vim.opt.undofile       = true
-vim.opt.encoding       = "utf-8"
-vim.opt.undodir	       = os.getenv("HOME") .. "/.local/share/nvim/undo"
-vim.opt.incsearch      = true
-vim.opt.hidden	       = true -- allow background buffers
-vim.opt.laststatus     = 2
-vim.opt.showmode       = true -- set false when using airline
-vim.opt.timeoutlen     = 50
-vim.opt.mouse	       = "a"
-vim.opt.mousemodel     = "extend"
-vim.opt.clipboard      = "unnamedplus"
+vim.opt.undofile   = true
+vim.opt.encoding   = "utf-8"
+vim.opt.undodir    = os.getenv("HOME") .. "/.local/share/nvim/undo"
+vim.opt.incsearch  = true
+vim.opt.hidden     = true -- allow background buffers
+vim.opt.laststatus = 2
+vim.opt.showmode   = true -- set false when using airline
+vim.opt.timeoutlen = 50
+vim.opt.mouse      = "a"
+vim.opt.mousemodel = "extend"
+vim.opt.clipboard  = "unnamedplus"
 
 vim.g.vimtex_view_method = "zathura"
 
@@ -32,18 +32,18 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 
 vim.cmd.colorscheme('default')
-vim.opt.background          = "dark"
-vim.opt.termguicolors = true
-vim.opt.guifont             = "monospace:h14"
-vim.g.neovide_theme = 'auto'
+vim.opt.background                           = "dark"
+vim.opt.termguicolors                        = true
+vim.opt.guifont                              = "monospace:h14"
+vim.g.neovide_theme                          = 'auto'
 vim.g.neovide_input_macos_option_key_is_meta = 'both'
-vim.g.neovide_cursor_animation_length = 0.02
+vim.g.neovide_cursor_animation_length        = 0.02
 
-vim.cmd.highlight({ "Normal", "guibg=black" })
-vim.cmd.highlight({ "StatusLine", "guibg=black", "guifg=gray" })
-vim.cmd.highlight({ "Todo", "guibg=red" }) -- TODO
-vim.cmd.highlight({ "DiagnosticWarn", "guibg=#333333" })
-vim.cmd.highlight({ "DiagnosticError", "guibg=#333333" })
+vim.cmd.highlight({ "Normal",          "guibg=black"               })
+vim.cmd.highlight({ "StatusLine",      "guibg=black", "guifg=gray" })
+vim.cmd.highlight({ "Todo",            "guibg=red"                 }) -- TODO
+vim.cmd.highlight({ "DiagnosticWarn",  "guibg=#333333"             })
+vim.cmd.highlight({ "DiagnosticError", "guibg=#333333"             })
 
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = {

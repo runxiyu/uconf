@@ -100,7 +100,7 @@
 (setq my-credentials-file "~/.local/share/secrets/irc.el")
 (defun my-znc-password (server)
   (with-temp-buffer
-    (insert-file-contents-literally my-credentials-file)
+  (insert-file-contents-literally my-credentials-file)
     (plist-get (read (buffer-string)) :pass)))
 (setq circe-networks '(("libera"
 			:host "irc.runxiyu.org"
