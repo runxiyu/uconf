@@ -11,6 +11,7 @@ if [ "$(uname)" = "Darwin" ]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 	export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 	export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+	export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 elif [ "$(uname)" = "Linux" ]; then
 	export GDK_BACKEND="wayland"
 fi
