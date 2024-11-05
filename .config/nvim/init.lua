@@ -34,7 +34,7 @@ vim.keymap.set("n", "<F3>",  ":set hlsearch!<CR>")
 vim.cmd.colorscheme('default')
 vim.opt.background          = "dark"
 vim.opt.termguicolors = true
--- vim.opt.guifont             = "monospace:h14"
+vim.opt.guifont             = "monospace:h14"
 vim.g.neovide_theme = 'auto'
 vim.g.neovide_input_macos_option_key_is_meta = 'both'
 vim.g.neovide_cursor_animation_length = 0.02

@@ -11,7 +11,7 @@
 (set-face-attribute 'variable-pitch
                     nil
                     :height 160
-                    :family "Century Schoolbook")
+                    :family "Inter")
 					; (add-to-list 'default-frame-alist '(undecorated . t))
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
@@ -135,3 +135,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+

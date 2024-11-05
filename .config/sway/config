@@ -89,7 +89,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 
 bindsym $mod+b splith
 bindsym $mod+v splitv
-bindsym $mod+y layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+d layout toggle split
 
 bindsym $mod+f fullscreen
