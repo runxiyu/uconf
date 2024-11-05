@@ -30,6 +30,10 @@
 (require 'ivy)
 (ivy-mode 1)
 
+;; LaTeX
+(use-package auctex
+  :ensure t)
+
 ;; Themes
 (setq custom-safe-themes t)
 ;; (load-theme 'wheatgrass)
@@ -75,17 +79,15 @@
                                (cpp-mode . cpp-ts-mode)))
 
 ;; Indentation
-;; (setq c-default-style "linux"
-;;       c-basic-offset 8
-;;       tab-width 8
-;;       indent-tabs-mode t)
-;; (setq custom-tab-width 8)
-;; (defun disable-tabs () (interactive)
-;;        (setq indent-tabs-mode nil))
-;; (defun enable-tabs () (interactive)
-;;        (local-set-key (kbd "TAB") 'tab-to-tab-stop)
-;;        (setq indent-tabs-mode t)
-;;        (setq tab-width custom-tab-width))
+(setq tab-width 8
+      indent-tabs-mode t
+      custom-tab-width 8)
+(defun disable-tabs () (interactive)
+       (setq indent-tabs-mode nil))
+(defun enable-tabs () (interactive)
+       (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+       (setq indent-tabs-mode t)
+       (setq tab-width custom-tab-width))
 ;; (add-hook 'prog-mode-hook 'enable-tabs)
 ;; (add-hook 'text-mode-hook 'enable-tabs)
 ;; (add-hook 'lisp-mode-hook 'disable-tabs)
@@ -131,7 +133,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(maxima vterm-toggle undo-tree fzf go darkroom vterm sly magit ivy circe)))
+   '(auctex maxima vterm-toggle undo-tree fzf go darkroom vterm sly magit ivy circe)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
