@@ -6,11 +6,11 @@
 ;; Basics
 (set-face-attribute 'default
                     nil
-                    :height 160
+                    :height 120
                     :family "DejaVu Sans Mono")
 (set-face-attribute 'variable-pitch
                     nil
-                    :height 160
+                    :height 120
                     :family "Inter")
 					; (add-to-list 'default-frame-alist '(undecorated . t))
 (global-unset-key (kbd "C-z"))
@@ -27,8 +27,8 @@
 (fringe-mode 0)
 
 ;; Ivy
-(require 'ivy)
-(ivy-mode 1)
+;; (require 'ivy)
+;; (ivy-mode 1)
 
 ;; LaTeX
 (use-package auctex
@@ -38,7 +38,6 @@
 (setq custom-safe-themes t)
 ;; (load-theme 'wheatgrass)
 ;; (load-theme 'adwaita)
-
 ;; Evil
 ;; (setq evil-undo-system 'undo-redo
 ;;       evil-want-fine-undo t)
@@ -133,7 +132,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(auctex maxima vterm-toggle undo-tree fzf go darkroom vterm sly magit ivy circe)))
+   '(vterm auctex maxima vterm-toggle undo-tree fzf go darkroom sly magit ivy circe)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
