@@ -15,7 +15,7 @@ function git {
 	fi
 }
 
-alias rawuconf="git --git-dir=$HOME/Repos/uconf.git --work-tree=$HOME"
+alias rawuconf="git --git-dir=$HOME/.local/share/uconf.git --work-tree=$HOME"
 function uconf {
 	if [[ "$1" == "commit" ]]; then
 		shift 1
