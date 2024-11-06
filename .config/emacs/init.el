@@ -120,7 +120,7 @@
 (setq dired-listing-switches "-l")
 
 ;; Server
-(server-start)
+;; (server-start)
 
 
 ;; Warnings
