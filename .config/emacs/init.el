@@ -8,6 +8,10 @@
                     nil
                     :height 120
                     :family "DejaVu Sans Mono")
+(set-face-attribute 'fixed-pitch-serif
+                    nil
+                    ;; :height 120
+                    :family "DejaVu Sans Mono")
 (set-face-attribute 'variable-pitch
                     nil
                     :height 120
@@ -36,6 +40,7 @@
 
 ;; Themes
 (setq custom-safe-themes t)
+;; (load-theme 'wombat)
 ;; (load-theme 'wheatgrass)
 ;; (load-theme 'adwaita)
 ;; Evil
@@ -132,7 +137,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(vterm auctex maxima vterm-toggle undo-tree fzf go darkroom sly magit ivy circe)))
+   '(solarized-theme vterm auctex maxima vterm-toggle undo-tree fzf go darkroom sly magit ivy circe)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
