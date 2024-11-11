@@ -64,3 +64,6 @@ PS1="%~ %# "
 export GPG_TTY="$(tty)"
 
 source <(fzf --zsh)
+
+autoload -U compinit
+compinit
