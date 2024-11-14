@@ -16,6 +16,7 @@ if [ "$(uname)" = "Darwin" ]; then
 	export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 elif [ "$(uname)" = "Linux" ]; then
 	export GDK_BACKEND="wayland"
+	export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor # fix QtWebView
 fi
 
 export PATH="$GOPATH/bin:$PATH"
