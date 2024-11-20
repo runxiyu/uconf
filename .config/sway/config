@@ -1,6 +1,6 @@
 # vim: filetype=swayconfig
 
-xwayland disable
+xwayland enable
 
 set $mod Mod4
 set $left h
@@ -33,6 +33,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 
 input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	tap disabled
+	dwt disabled
 	natural_scroll enabled
 	xkb_layout "us"
 	xkb_options "caps:backspace"
