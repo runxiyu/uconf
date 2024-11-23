@@ -67,3 +67,5 @@ source <(fzf --zsh)
 
 autoload -U compinit
 compinit
+
+alias rm='rm --one-file-system -i'
