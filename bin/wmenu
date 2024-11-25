@@ -2,4 +2,4 @@
 
 set -x
 
-"/usr/bin/$(basename -- "$0")" -f 'monospace 13' "$@"
+"/usr/bin/$(basename -- "$0")" -f 'monospace 13' -b "$@"
