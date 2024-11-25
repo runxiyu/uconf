@@ -1,6 +1,6 @@
 # vim: filetype=swayconfig
 
-xwayland enable
+xwayland disable
 
 set $mod Mod4
 set $left h
@@ -118,7 +118,7 @@ hide_edge_borders none
 
 bar {
 	font monospace 10
-	position top
+	position bottom
 	status_command ~/.local/bin/rxbar
 	mode dock
 	colors {
