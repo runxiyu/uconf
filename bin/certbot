@@ -1,0 +1,3 @@
+#!/bin/sh
+
+"$HOME"/.local/bin/certbot --config-dir "$HOME"/.config/letsencrypt --work-dir "$HOME"/.local/state/letsencrypt --logs-dir "$HOME"/.cache/letsencrypt-logs "$@"
