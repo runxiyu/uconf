@@ -104,6 +104,9 @@ bindsym $mod+minus scratchpad show
 
 bindsym XF86MonBrightnessDown exec brightnessctl s 8%-
 bindsym XF86MonBrightnessUp exec brightnessctl s 8%+
+bindsym XF86AudioLowerVolume exec pamixer --decrease 5
+bindsym XF86AudioRaiseVolume exec pamixer --increase 5
+bindsym XF86AudioMute exec pamixer --toggle-mute
 
 gaps inner 10
 gaps outer -3
@@ -112,9 +115,9 @@ smart_borders no_gaps
 smart_gaps on
 hide_edge_borders none
 
-#client.focused #998d6b #998d6b #000000
-#client.unfocused #4c4635 #4c4635 #998d6b
-#client.focused_inactive #4c4635 #4c4635 #998d6b
+# client.focused #998d6b #998d6b #000000
+# client.unfocused #4c4635 #4c4635 #998d6b
+# client.focused_inactive #4c4635 #4c4635 #998d6b
 
 bar {
 	font monospace 10
@@ -122,12 +125,12 @@ bar {
 	status_command ~/.local/bin/rxbar
 	mode dock
 	colors {
-		# statusline #777777
+		statusline #777777
 		background #222222
-#		inactive_workspace #222222 #222222 #777777
-#		active_workspace #222222 #222222 #777777
-#		focused_workspace #777777 #777777 #222222
-#		urgent_workspace #ff0000 #ff0000 #222222
+		# inactive_workspace #222222 #222222 #777777
+		# active_workspace #222222 #222222 #777777
+		# focused_workspace #777777 #777777 #222222
+		# urgent_workspace #ff0000 #ff0000 #222222
 	}
 }
 
