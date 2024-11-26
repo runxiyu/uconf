@@ -107,6 +107,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 8%+
 bindsym XF86AudioLowerVolume exec pamixer --decrease 5
 bindsym XF86AudioRaiseVolume exec pamixer --increase 5
 bindsym XF86AudioMute exec pamixer --toggle-mute
+bindsym XF86Search exec grim -c
 
 gaps inner 10
 gaps outer -3
