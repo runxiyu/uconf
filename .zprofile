@@ -14,6 +14,7 @@ if [ "$(uname)" = "Darwin" ]; then
 	export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 	export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 	export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+	export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 elif [ "$(uname)" = "Linux" ]; then
 	export GDK_BACKEND=wayland
 	export GDK_DEBUG=gl-no-fractional
@@ -25,3 +26,4 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export EDITOR="nvim"
+
