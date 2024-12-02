@@ -17,3 +17,5 @@
 	insteadOf = kde:
 [url "ssh://git@invent.kde.org/"]
 	pushInsteadOf = kde:
+[url "ssh://me@git.runxiyu.org/srv/git/"]
+	insteadOf = https://git.runxiyu.org
