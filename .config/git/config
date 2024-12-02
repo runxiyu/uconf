@@ -19,3 +19,5 @@
 	pushInsteadOf = kde:
 [url "ssh://me@git.runxiyu.org/srv/git/"]
 	insteadOf = https://git.runxiyu.org
+[alias]
+	push = push --verbose
