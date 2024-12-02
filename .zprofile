@@ -20,6 +20,8 @@ elif [ "$(uname)" = "Linux" ]; then
 	export GDK_DEBUG=gl-no-fractional
 	export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor # fix QtWebView
 	export SDL_VIDEODRIVER=wayland
+	. "$HOME/.cargo/env"
+	export LD_LIBRARY_PATH="$HOME/Programming/hax_string/:$HOME/Programming/hax_table/"
 fi
 
 export PATH="$GOPATH/bin:$PATH"
