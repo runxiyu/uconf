@@ -10,6 +10,8 @@ set $right l
 
 set $term foot
 set $menu wmenu-run
+set $browser firefox
+set $filemanager foot lf
 
 output eDP-1 {
 	resolution 2560x1600
@@ -43,6 +45,9 @@ input * xkb_options compose:ralt
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $menu
+bindsym $mod+w exec $browser
+bindsym $mod+r exec $filemanager
+
 bindsym $mod+Shift+c kill
 
 bindsym $mod+Shift+r reload
@@ -126,7 +131,7 @@ bar {
 	font monospace 10
 	position top
 	status_command ~/.local/bin/rxbar
-	mode dock
+	mode hide
 	colors {
 		statusline #777777
 		background #222222
