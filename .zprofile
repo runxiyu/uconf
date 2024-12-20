@@ -26,6 +26,7 @@ elif [ "$(uname)" = "Linux" ]; then
 	export HAX_STRING_PATH="$HOME/Programming/hax_string/"
 	export HAX_TABLE_PATH="$HOME/Programming/hax_table/"
 	export HAX_LOADER_PATH="$HOME/Programming/hax_loader/"
+	export PYTHONPATH="$PYTHONPATH:$HOME/Programming/sjdb-src/"
 fi
 
 export PATH="$GOPATH/bin:$PATH"
