@@ -109,8 +109,8 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-bindsym XF86MonBrightnessDown exec brightnessctl s 8%-
-bindsym XF86MonBrightnessUp exec brightnessctl s 8%+
+bindsym XF86MonBrightnessDown exec brightnessctl --exponent=2 s 4%-
+bindsym XF86MonBrightnessUp exec brightnessctl --exponent=2 s 4%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -131,7 +131,7 @@ bar {
 	font monospace 10
 	position top
 	status_command ~/.local/bin/rxbar
-	mode hide
+	mode dock
 	colors {
 		statusline #777777
 		background #222222
