@@ -131,7 +131,7 @@ bar {
 	font monospace 10
 	position top
 	status_command ~/.local/bin/rxbar
-	mode dock
+	mode hide
 	colors {
 		statusline #777777
 		background #222222
