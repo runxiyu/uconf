@@ -7,11 +7,11 @@
 (set-face-attribute 'default
                     nil
                     :height 120
-                    :family "DejaVu Sans Mono")
+                    :family "monospace")
 (set-face-attribute 'fixed-pitch-serif
                     nil
                     ;; :height 120
-                    :family "DejaVu Sans Mono")
+                    :family "monospace")
 (set-face-attribute 'variable-pitch
                     nil
                     :height 120

@@ -1,5 +1,7 @@
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[url "ssh://git@git.sr.ht/"]
+	insteadOf = https://git.sr.ht/
 [user]
 	name = Runxi Yu
 	email = me@runxiyu.org
@@ -21,3 +23,8 @@
 	insteadOf = https://git.runxiyu.org
 [alias]
 	push = push --verbose
+[sendemail]
+	smtpserver = mail.runxiyu.org
+	smtpuser = me@runxiyu.org
+	smtpencryption = ssl
+	smtpserverport = 465

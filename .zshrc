@@ -2,6 +2,11 @@ if [ "$(uname)" = "Darwin" ]; then
 	alias pkg='brew'
 elif [ "$(uname)" = "Linux" ]; then
 	alias pkg='sudo dnf'
+	if [ -n "$GUIX_ENVIRONMENT" ]; then
+		if [[ $PS1 =~ (.*)"\\$" ]]; then
+			PS1="${BASH_REMATCH[1]} [env]\\\$ "
+		fi
+	fi
 fi
 
 
