@@ -25,12 +25,12 @@ int main()
 	fdt = open("/sys/class/power_supply/macsmc-battery/time_to_empty_now", O_RDONLY);
 	fdc = open("/sys/class/power_supply/macsmc-battery/capacity", O_RDONLY);
 	fds = open("/sys/class/power_supply/macsmc-battery/status", O_RDONLY);
-	if (fdt == -1 || fds == -1) {
+	if (fdc == -1 || fds == -1) {
 		fdt = open("/sys/class/power_supply/BAT0/time_to_empty_now", O_RDONLY);
 		fdc = open("/sys/class/power_supply/BAT0/capacity", O_RDONLY);
 		fds = open("/sys/class/power_supply/BAT0/status", O_RDONLY);
 	}
-	if (fdt == -1 || fds == -1) {
+	if (fdc == -1 || fds == -1) {
 		// no battery
 		for (;;) {
 			t = time(NULL);
