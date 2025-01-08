@@ -125,7 +125,6 @@ smart_borders no_gaps
 smart_gaps on
 hide_edge_borders none
 
-client.background        #ffffff
 client.focused           #905090 #905090 #ffffff #A070A0 #905090      
 client.focused_inactive  #333333 #5f676a #ffffff #484e50 #5f676a      
 client.focused_tab_title #333333 #5f676a #ffffff
@@ -144,7 +143,7 @@ bar {
 		inactive_workspace #222222 #222222 #777777
 		active_workspace #222222 #222222 #905090
 		focused_workspace #905090 #905090 #ffffff
-		urgent_workspace #ff0000 #ff0000 #222222
+		urgent_workspace #ff0000 #ff0000 #ffffff
 	}
 }
 
