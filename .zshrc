@@ -75,4 +75,4 @@ compinit
 alias rm='rm --one-file-system -i'
 
 autoload -U colors && colors
-PS1="%{$fg[magenta]%}%~ %# "
+PS1="%F{magenta}%~ %# %f"
