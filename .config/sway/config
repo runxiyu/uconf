@@ -128,7 +128,7 @@ hide_edge_borders none
 client.focused           #905090 #905090 #ffffff #A070A0 #905090      
 client.focused_inactive  #333333 #5f676a #ffffff #484e50 #5f676a      
 client.focused_tab_title #333333 #5f676a #ffffff
-client.unfocused         #333333 #222222 #888888 #292d2e #222222      
+client.unfocused         #222222 #222222 #888888 #292d2e #222222      
 client.urgent            #2f343a #ff0000 #ffffff #ff0000 #ff0000      
 client.placeholder       #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
