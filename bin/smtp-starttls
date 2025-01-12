@@ -1,0 +1,2 @@
+#!/bin/sh
+openssl s_client -crlf -connect localhost:25 -starttls smtp
