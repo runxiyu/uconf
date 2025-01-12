@@ -64,7 +64,6 @@ function uconf {
 
 alias ls="ls --color=auto"
 
-PS1="%~ %# "
 
 export GPG_TTY="$(tty)"
 
@@ -74,3 +73,6 @@ autoload -U compinit
 compinit
 
 alias rm='rm --one-file-system -i'
+
+autoload -U colors && colors
+PS1="%{$fg[magenta]%}%~ %# "
