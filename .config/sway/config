@@ -119,7 +119,7 @@ bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86Search exec grim -c
 
 gaps inner 10
-gaps outer -3
+gaps outer -10
 default_border pixel 1
 smart_borders no_gaps
 smart_gaps on
@@ -136,9 +136,9 @@ bar {
 	font monospace 10
 	position top
 	status_command ~/.local/bin/rxbar
-	mode dock
+	mode invisible
 	colors {
-		statusline #777777
+	statusline #777777
 		background #222222
 		inactive_workspace #222222 #222222 #777777
 		active_workspace #222222 #222222 #905090
