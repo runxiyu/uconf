@@ -9,6 +9,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define MAXLEN 7
 
@@ -19,6 +21,32 @@ size_t len, len2;
 struct tm td;
 int fdt, fds, fdc;
 time_t t1;
+char dmesg_buf[1024];
+
+void get_latest_dmesg(char *buffer, size_t size) {
+	FILE *fp = popen("dmesg | tail -1", "r");
+	if (fp == NULL) {
+		perror("popen failed");
+		return;
+	}
+	if (fgets(buffer, size, fp) == NULL) {
+		perror("fgets failed");
+		pclose(fp);
+		return;
+	}
+	pclose(fp);
+
+	char *message_start = strchr(buffer, ']');
+	if (message_start) {
+		message_start++;
+		while (*message_start == ' ') message_start++;
+		size_t message_len = strlen(message_start);
+		if (message_len > 0 && message_start[message_len - 1] == '\n') {
+			message_start[message_len - 1] = '\0';
+		}
+		memmove(buffer, message_start, message_len + 1);
+	}
+}
 
 int main()
 {
@@ -35,8 +63,10 @@ int main()
 		for (;;) {
 			t = time(NULL);
 			td = *localtime(&t);
+			get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
 			dprintf(STDOUT_FILENO,
-				"NOBAT %d-%02d-%02d %02d:%02d:%02d\n",
+				"%s | NOBAT %d-%02d-%02d %02d:%02d:%02d\n",
+				dmesg_buf,
 				td.tm_year + 1900,
 				td.tm_mon + 1,
 				td.tm_mday,
@@ -58,8 +88,10 @@ int main()
 		len2 = pread(fdt, buf2, MAXLEN, 0);
 		buf[len] = '\0';
 		buf2[len2-1] = '\0';
+		get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
 		dprintf(STDOUT_FILENO,
-			"%s.%s %d-%02d-%02d %02d:%02d:%02d\n",
+			"%s | %s.%s %d-%02d-%02d %02d:%02d:%02d\n",
+			dmesg_buf,
 			buf,
 			buf2,
 			td.tm_year + 1900,
