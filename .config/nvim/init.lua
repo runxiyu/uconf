@@ -9,6 +9,8 @@ Plug 'https://github.com/mattn/vim-goimports' -- golang.org/x/tools/cmd/goimport
 Plug 'https://github.com/junegunn/vim-easy-align'
 Plug 'https://github.com/ibhagwan/fzf-lua'
 Plug 'https://github.com/hiphish/rainbow-delimiters.nvim'
+Plug 'https://github.com/preservim/nerdtree'
+Plug 'https://github.com/vimwiki/vimwiki'
 vim.call('plug#end')
 
 vim.opt.shortmess:prepend("IrCFlotTO")
