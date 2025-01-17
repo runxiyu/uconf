@@ -1,0 +1,3 @@
+#!/bin/sh
+
+openssl s_client -crlf -connect runxiyu.org:993
