@@ -108,8 +108,8 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+s move scratchpad
+bindsym $mod+s scratchpad show
 
 bindsym XF86MonBrightnessDown exec brightnessctl --exponent=2 s 4%-
 bindsym XF86MonBrightnessUp exec brightnessctl --exponent=2 s 4%+
@@ -136,15 +136,21 @@ bar {
 	font monospace 8
 	position top
 	status_command ~/.local/bin/rxbar
-	mode invisible
+	mode dock
 	colors {
-	statusline #777777
-		background #222222
-		inactive_workspace #222222 #222222 #777777
-		active_workspace #222222 #222222 #905090
+		statusline #aaaaaa
+		background #000000
+		inactive_workspace #000000 #000000 #aaaaaa
+		active_workspace #000000 #000000 #905090
 		focused_workspace #905090 #905090 #ffffff
 		urgent_workspace #ff0000 #ff0000 #ffffff
 	}
 }
 
 include /etc/sway/config.d/*
+
+for_window [title="foot-scratchpad"] {
+	move scratchpad
+	resize set 1024 768
+}
+exec foot -T foot-scratchpad sh -c 'while true; do nvim ~/Personal/scratch.txt; done'

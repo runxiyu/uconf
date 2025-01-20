@@ -26,8 +26,7 @@ char dmesg_buf[1024];
 void get_latest_dmesg(char *buffer, size_t size)
 {
 	FILE *fp =
-	    popen("journalctl --lines=1 --no-pager | sed 's/^[^s]*s22537 //'",
-		  "r");
+	    popen("sed ':a;N;$!ba;s/\\n/ | /g' ~/Personal/scratch.txt", "r");
 	if (fp == NULL) {
 		perror("popen failed");
 		return;
@@ -65,7 +64,7 @@ int main()
 			td = *localtime(&t);
 			get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
 			dprintf(STDOUT_FILENO,
-				"%s | NOBAT %d-%02d-%02d %02d:%02d:%02d\n",
+				"%s :: NOBAT %d-%02d-%02d %02d:%02d:%02d\n",
 				dmesg_buf,
 				td.tm_year + 1900,
 				td.tm_mon + 1,
@@ -87,7 +86,7 @@ int main()
 		buf2[len2 - 1] = '\0';
 		get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
 		dprintf(STDOUT_FILENO,
-			"%s | %s.%s %d-%02d-%02d %02d:%02d:%02d\n",
+			"%s :: %s.%s %d-%02d-%02d %02d:%02d:%02d\n",
 			dmesg_buf,
 			buf,
 			buf2,

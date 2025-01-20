@@ -76,3 +76,5 @@ alias rm='rm --one-file-system -i'
 
 autoload -U colors && colors
 PS1="%F{magenta}%~ %# %f"
+
+eval "$(zoxide init zsh)"
