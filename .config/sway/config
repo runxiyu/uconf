@@ -8,10 +8,10 @@ set $down j
 set $up k
 set $right l
 
-set $term foot
+set $term footclient
 set $menu wmenu-run
 set $browser firefox
-set $filemanager foot lf
+set $filemanager footclient lf
 
 output eDP-1 {
 	resolution 2560x1600
@@ -26,6 +26,7 @@ exec swayidle -w \
          before-sleep 'swaylock -f -c 000000 -i /dev/null'
 bindsym $mod+Escape exec 'swaylock -f -c 000000 -i /dev/null'
 
+exec foot --server
 exec mako
 exec /usr/libexec/xdg-desktop-portal-wlr
 exec dbus-update-activation-environment --all
