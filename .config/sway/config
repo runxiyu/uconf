@@ -139,7 +139,7 @@ client.urgent            #2f343a #ff0000 #ffffff #ff0000 #ff0000
 client.placeholder       #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
 bar {
-	font monospace 8
+	font monospace 10
 	position top
 	status_command ~/.local/bin/rxbar
 	mode dock
