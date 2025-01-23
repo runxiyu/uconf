@@ -1,0 +1,3 @@
+#!/bin/sh
+
+hx -c $HOME/.config/helix/config_light.toml "$@"
