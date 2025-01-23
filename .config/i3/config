@@ -6,7 +6,7 @@ set $down j
 set $up k
 set $right l
 
-set $term xterm
+set $term alacritty
 set $menu dmenu-run
 set $browser firefox
 set $filemanager foot lf

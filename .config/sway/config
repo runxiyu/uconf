@@ -10,6 +10,7 @@ set $right l
 
 set $term foot
 set $term_light foot_light
+set $emacs emacsclient -c
 set $menu wmenu-run
 set $browser firefox
 set $filemanager footclient lf
@@ -30,6 +31,7 @@ bindsym $mod+Escape exec 'swaylock -f -c 000000 -i /dev/null'
 exec mako
 exec /usr/libexec/xdg-desktop-portal-wlr
 exec dbus-update-activation-environment --all
+exec emacs --daemon
 
 input "1:1:AT_Translated_Set_2_keyboard" {
 	xkb_layout "gbcustom"
@@ -56,6 +58,7 @@ bindsym $mod+Shift+Return exec $term_light
 bindsym $mod+p exec $menu
 bindsym $mod+w exec $browser
 bindsym $mod+r exec $filemanager
+bindsym $mod+e exec $emacs
 
 bindsym $mod+Shift+c kill
 
