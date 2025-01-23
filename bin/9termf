@@ -1,0 +1,3 @@
+#!/bin/sh
+export SHELL=rc
+9term -f "$PLAN9"/font/icr.font "$@"

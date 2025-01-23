@@ -151,3 +151,5 @@
  )
 
 (put 'dired-find-alternate-file 'disabled nil)
+
+(add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode))

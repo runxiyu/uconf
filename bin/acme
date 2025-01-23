@@ -1,3 +1,5 @@
 #!/bin/sh
 
-"$PLAN9/bin/acme" -f "$PLAN9/font/luc/unicode.16.font"
+export SHELL=rc
+
+"$PLAN9/bin/acme" -f "$PLAN9/font/luc/unicode.16.font" "$@"

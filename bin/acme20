@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export SHELL=rc
+
+"$PLAN9/bin/acme" -f "$PLAN9/font/luc/unicode.20.font" "$@"
