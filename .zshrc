@@ -78,3 +78,16 @@ autoload -U colors && colors
 PS1="%F{magenta}%~ %# %f"
 
 eval "$(zoxide init zsh)"
+
+
+alias acme="acme -f $PLAN9/font/luc/unicode.20.font"
+alias acmes="acme & disown" 
+alias acmee="acmes; exit" 
+function xio {
+	SHELL=rc Xephyr -screen 1920x1080 :1 &
+	sleep 0.5
+	SHELL=rc DISPLAY=:1 rio &
+	disown
+	disown
+	disown
+}

@@ -18,6 +18,7 @@ vim.opt.undofile   = true
 vim.opt.encoding   = "utf-8"
 vim.opt.undodir    = os.getenv("HOME") .. "/.local/share/nvim/undo"
 vim.opt.incsearch  = true
+vim.opt.linebreak  = true
 vim.opt.hidden     = true -- allow background buffers
 vim.opt.laststatus = 2
 vim.opt.showmode   = true -- set false when using airline
