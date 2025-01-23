@@ -31,7 +31,8 @@ exec /usr/libexec/xdg-desktop-portal-wlr
 exec dbus-update-activation-environment --all
 
 input "1:1:AT_Translated_Set_2_keyboard" {
-	xkb_layout "gb"
+	xkb_layout "gbcustom"
+	xkb_options "compose:ralt"
 }
 
 input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
