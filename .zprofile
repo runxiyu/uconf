@@ -33,7 +33,7 @@ elif [ "$(uname)" = "Linux" ]; then
 	export PATH="$PATH:$PLAN9/bin"
 	GUIX_PROFILE="/home/runxiyu/.guix-profile"
 	. "$GUIX_PROFILE/etc/profile"
-	export PLAN9="/home/runxiyu/External/plan9port"
+	[ -d /usr/lib/plan9 ] && export PLAN9='/usr/lib/plan9' || export PLAN9="/home/runxiyu/External/plan9port"
 	export PATH="$PATH:$PLAN9/bin"
 fi
 
