@@ -29,6 +29,8 @@ elif [ "$(uname)" = "Linux" ]; then
 	export HAX_LOADER_PATH="$HOME/Programming/hax_loader/"
 	export PYTHONPATH="$PYTHONPATH:$HOME/Programming/sjdb-src/"
 	export GUIX_LOCPATH="$HOME/.guix-profile/lib/locale"
+	export PLAN9="/usr/lib/plan9"
+	export PATH="$PATH:$PLAN9/bin"
 	GUIX_PROFILE="/home/runxiyu/.guix-profile"
 	. "$GUIX_PROFILE/etc/profile"
 fi

@@ -35,16 +35,20 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 	xkb_options "compose:ralt"
 }
 
+input "2:10:TPPS/2_IBM_TrackPoint" {
+	accel_profile flat
+}
+
 input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	tap disabled
 	dwt disabled
 	natural_scroll enabled
 	xkb_layout "us"
-}
-
-input * {
 	xkb_options "compose:ralt,caps:backspace"
 }
+
+# Don't use middle click for scrolling, so it works properly in acme
+input * scroll_button disable
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $menu
