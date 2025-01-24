@@ -51,6 +51,13 @@ input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
 	xkb_options "compose:ralt,caps:backspace"
 }
 
+input "1149:8257:Kensington_Slimblade_Trackball" {
+	accel_profile adaptive
+	pointer_accel 0
+}
+
+seat seat1 attach 1149:8257:Kensington_Slimblade_Trackball
+
 # Don't use middle click for scrolling, so it works properly in acme
 input * scroll_button disable
 
@@ -83,9 +90,9 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# Use mouse to drag/resize windows, warp the mouse, etc
+# Use mouse to drag/resize windows, etc.
 floating_modifier $mod normal
-mouse_warping container
+# mouse_warping container
 
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
