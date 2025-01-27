@@ -54,6 +54,15 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Tabs
+;; (use-package centaur-tabs
+;;   :demand
+;;   :config
+;;   (centaur-tabs-mode t)
+;;   :bind
+;;   ("C-<prior>" . centaur-tabs-backward)
+;;   ("C-<next>" . centaur-tabs-forward))
+
 ;; Undo
 (require 'undo-tree)
 (global-undo-tree-mode 1)
@@ -142,7 +151,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(pdf-tools plan9-theme acme-theme meow evil solarized-theme vterm auctex maxima vterm-toggle undo-tree fzf go darkroom sly magit ivy circe)))
+   '(centaur-tabs pdf-tools plan9-theme acme-theme meow evil solarized-theme vterm auctex maxima vterm-toggle undo-tree fzf go darkroom sly magit ivy circe)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

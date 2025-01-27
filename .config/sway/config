@@ -44,9 +44,11 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
 }
 
 input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
+	repeat_rate 25
 	tap disabled
 	dwt disabled
 	natural_scroll enabled
+	scroll_factor 0.15
 	xkb_layout "us"
 	xkb_options "compose:ralt,caps:backspace"
 }
@@ -55,8 +57,6 @@ input "1149:8257:Kensington_Slimblade_Trackball" {
 	accel_profile adaptive
 	pointer_accel 0
 }
-
-seat seat1 attach 1149:8257:Kensington_Slimblade_Trackball
 
 # Don't use middle click for scrolling, so it works properly in acme
 input * scroll_button disable
