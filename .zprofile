@@ -44,7 +44,7 @@ export PATH="$HOME/bin:$PATH"
 export EDITOR="nvim"
 
 if [ "$(uname)" = "Linux" ]; then
-	if [ "$(tty)" = "/dev/tty2" ]; then
+	if [ "$(tty)" = "/dev/tty1" ]; then
 		sway
 	fi
 fi
