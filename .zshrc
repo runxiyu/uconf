@@ -72,7 +72,7 @@ source <(fzf --zsh)
 autoload -U compinit
 compinit
 
-alias rm='rm --one-file-system -i'
+alias rm='rm -i'
 
 autoload -U colors && colors
 PS1="%F{magenta}%~ %# %f"
