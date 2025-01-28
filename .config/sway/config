@@ -171,4 +171,4 @@ for_window [title="foot-scratchpad"] {
 	move scratchpad
 	resize set 1024 768
 }
-exec foot -T foot-scratchpad sh -c 'while true; do nvim ~/Personal/scratch.txt; done'
+exec foot -T foot-scratchpad sh -c 'while true; do nvim ~/Personal/scratch.txt; sleep 5; done'
