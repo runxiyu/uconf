@@ -13,7 +13,7 @@ set $term_light foot_light
 set $emacs emacsclient -c
 set $menu wmenu-run
 set $browser firefox
-set $filemanager footclient lf
+set $filemanager foot lf
 
 output eDP-1 {
 	resolution 2560x1600
