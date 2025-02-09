@@ -1,3 +1,5 @@
 #!/bin/sh
 
-git commit -a -m "Update" && git push -v4
+git add .
+git commit -a -m "Update"
+git push -v4
