@@ -44,7 +44,7 @@ vim.g.neovide_input_macos_option_key_is_meta = 'both'
 vim.g.neovide_cursor_animation_length        = 0.02
 
 vim.cmd.highlight({ "Normal",          "guibg=black"               })
-vim.cmd.highlight({ "StatusLine",      "guibg=gray", "guifg=white" })
+vim.cmd.highlight({ "StatusLine",      "guibg=#494949", "guifg=white" })
 vim.cmd.highlight({ "Todo",            "guibg=red"                 }) -- TODO
 vim.cmd.highlight({ "DiagnosticWarn",  "guibg=#333333"             })
 vim.cmd.highlight({ "DiagnosticError", "guibg=#333333"             })

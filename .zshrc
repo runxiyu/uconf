@@ -62,8 +62,9 @@ function uconf {
 	fi
 }
 
-alias ls="ls --color=auto"
+# alias ls="ls --color=auto -X"
 
+alias ls="eza --sort=extension"
 
 export GPG_TTY="$(tty)"
 
@@ -90,3 +91,4 @@ function xio {
 	disown
 	disown
 }
+
