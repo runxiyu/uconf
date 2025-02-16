@@ -5,7 +5,6 @@
 [user]
 	name = Runxi Yu
 	email = me@runxiyu.org
-	signingKey = /home/runxiyu/.ssh/id_ed25519
 [commit]
 	verbose = true
 	gpgSign = true
@@ -14,11 +13,6 @@
 	gpgSign = true
 [core]
 	excludesfile = ~/.config/git/info/exclude
-	logallrefupdates = true
-	quotePath = false
-	commitGraph = true
-[gpg]
-	format = ssh
 [pull]
 	rebase = true
 [url "https://invent.kde.org/"]
@@ -34,18 +28,3 @@
 	smtpuser = me@runxiyu.org
 	smtpencryption = ssl
 	smtpserverport = 465
-[diff]
-	algorithm = histogram
-[gc]
-	reflogexpire = 90
-	writeCommitGraph = true
-[receive]
-	advertisePushOptions = true
-	procReceiveRefs = refs/for
-[fetch]
-	writeCommitGraph = true
-[safe]
-	directory = *
-[uploadpack]
-	allowfilter = true
-	allowAnySHA1InWant = true
