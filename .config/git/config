@@ -4,8 +4,6 @@
 	signingkey = /home/runxiyu/.ssh/id_ed25519
 [gpg]
 	format = ssh
-[log]
-	showSignature = true
 [commit]
 	verbose = true
 	gpgSign = true
