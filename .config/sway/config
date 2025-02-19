@@ -145,8 +145,8 @@ bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86Search exec grim -c
 
-gaps inner 10
-gaps outer -10
+gaps inner 5
+gaps outer -5
 default_border pixel 1
 smart_borders no_gaps
 smart_gaps on

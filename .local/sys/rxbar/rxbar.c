@@ -64,9 +64,8 @@ int main()
 			td = *localtime(&t);
 			get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
 			dprintf(STDOUT_FILENO,
-				"%s    NOBAT %d-%02d-%02d %02d:%02d:%02d\n",
+				"%s    NOBAT %02d-%02d %02d:%02d:%02d\n",
 				dmesg_buf,
-				td.tm_year + 1900,
 				td.tm_mon + 1,
 				td.tm_mday, td.tm_hour, td.tm_min, td.tm_sec);
 			t = (t + 1) * 1000000;
@@ -86,11 +85,10 @@ int main()
 		buf2[len2 - 1] = '\0';
 		get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
 		dprintf(STDOUT_FILENO,
-			"%s    %s.%s %d-%02d-%02d %02d:%02d:%02d\n",
+			"%s    %s.%s %02d-%02d %02d:%02d:%02d\n",
 			dmesg_buf,
 			buf,
 			buf2,
-			td.tm_year + 1900,
 			td.tm_mon + 1,
 			td.tm_mday, td.tm_hour, td.tm_min, td.tm_sec);
 		t = (t + 1) * 1000000;

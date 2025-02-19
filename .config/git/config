@@ -21,3 +21,7 @@
 	smtpuser = me@runxiyu.org
 	smtpencryption = ssl
 	smtpserverport = 465
+[gpg "ssh"]
+	allowedSignersFile = /home/runxiyu/.ssh/allowed_signers
+[credential]
+	helper = store
