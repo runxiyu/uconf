@@ -26,7 +26,7 @@ char dmesg_buf[1024];
 void get_latest_dmesg(char *buffer, size_t size)
 {
 	FILE *fp =
-	    popen("sed ':a;N;$!ba;s/\\n/ : /g' ~/Personal/scratch.txt", "r");
+	    popen("sed ':a;N;$!ba;s/\\n/ :: /g' ~/Personal/scratch.txt", "r");
 	if (fp == NULL) {
 		perror("popen failed");
 		return;
@@ -84,13 +84,24 @@ int main()
 		buf[len] = '\0';
 		buf2[len2 - 1] = '\0';
 		get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
-		dprintf(STDOUT_FILENO,
-			"%s    %s.%s %02d-%02d %02d:%02d:%02d\n",
-			dmesg_buf,
-			buf,
-			buf2,
-			td.tm_mon + 1,
-			td.tm_mday, td.tm_hour, td.tm_min, td.tm_sec);
+		int percentage = atoi(buf2);
+		if (percentage < 20) {
+			dprintf(STDOUT_FILENO,
+				"%s    <span foreground=\"red\">%s.%s</span> %02d-%02d %02d:%02d:%02d\n",
+				dmesg_buf,
+				buf,
+				buf2,
+				td.tm_mon + 1,
+				td.tm_mday, td.tm_hour, td.tm_min, td.tm_sec);
+		} else {
+			dprintf(STDOUT_FILENO,
+				"%s    %s.%s %02d-%02d %02d:%02d:%02d\n",
+				dmesg_buf,
+				buf,
+				buf2,
+				td.tm_mon + 1,
+				td.tm_mday, td.tm_hour, td.tm_min, td.tm_sec);
+		}
 		t = (t + 1) * 1000000;
 		for (t1 = time(NULL) * 1000000; t1 < t;
 		     t1 = time(NULL) * 1000000)

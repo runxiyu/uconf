@@ -164,6 +164,7 @@ bar {
 	position top
 	status_command ~/.local/bin/rxbar
 	mode dock
+	pango_markup on
 	colors {
 		statusline #aaaaaa
 		background #000000
