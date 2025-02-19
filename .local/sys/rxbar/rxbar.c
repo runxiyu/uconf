@@ -84,10 +84,19 @@ int main()
 		buf[len] = '\0';
 		buf2[len2 - 1] = '\0';
 		get_latest_dmesg(dmesg_buf, sizeof(dmesg_buf));
-		int percentage = atoi(buf2);
-		if (percentage < 20) {
+		int percentage = atoi(buf+1);
+		dprintf(STDERR_FILENO, "%d\n", percentage);
+		if (percentage < 11 && buf[0] != 'C') {
 			dprintf(STDOUT_FILENO,
-				"%s    <span foreground=\"red\">%s.%s</span> %02d-%02d %02d:%02d:%02d\n",
+				"%s    <span background=\"#ff0000\" foreground=\"#ffffff\">%s.%s</span> %02d-%02d %02d:%02d:%02d\n",
+				dmesg_buf,
+				buf,
+				buf2,
+				td.tm_mon + 1,
+				td.tm_mday, td.tm_hour, td.tm_min, td.tm_sec);
+		} else if (percentage < 21) {
+			dprintf(STDOUT_FILENO,
+				"%s    <span foreground=\"#ff2222\">%s.%s</span> %02d-%02d %02d:%02d:%02d\n",
 				dmesg_buf,
 				buf,
 				buf2,
