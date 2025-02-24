@@ -20,6 +20,7 @@ elif [ "$(uname)" = "Linux" ]; then
 	export GDK_BACKEND=wayland
 	export GDK_DEBUG=gl-no-fractional
 	export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor # fix QtWebView
+	export QT_QPA_PLATFORMTHEME=qt6ct
 	export SDL_VIDEODRIVER=wayland
 	export CARGO_NET_GIT_FETCH_WITH_CLI=true
 	# . "$HOME/.cargo/env"
@@ -28,16 +29,12 @@ elif [ "$(uname)" = "Linux" ]; then
 	export HAX_TABLE_PATH="$HOME/Programming/hax_table/"
 	export HAX_LOADER_PATH="$HOME/Programming/hax_loader/"
 	export PYTHONPATH="$PYTHONPATH:$HOME/Programming/sjdb-src/"
-	export GUIX_LOCPATH="$HOME/.guix-profile/lib/locale"
 	export PLAN9="/usr/lib/plan9"
 	export PATH="$PATH:$PLAN9/bin"
-	GUIX_PROFILE="/home/runxiyu/.guix-profile"
-	. "$GUIX_PROFILE/etc/profile"
 	[ -d /usr/lib/plan9 ] && export PLAN9='/usr/lib/plan9' || export PLAN9="/home/runxiyu/External/plan9port"
 	export PATH="$PATH:$PLAN9/bin"
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
@@ -48,3 +45,7 @@ if [ "$(uname)" = "Linux" ]; then
 		sway
 	fi
 fi
+
+. "$HOME/.cargo/env"      
+
+

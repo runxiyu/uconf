@@ -52,14 +52,17 @@ input "2:10:TPPS/2_IBM_TrackPoint" {
 	pointer_accel 0.4
 }
 
-input "1452:641:Apple_Internal_Keyboard_/_Trackpad" {
+input "1452:641:Apple_SPI_Keyboard" {
 	repeat_rate 25
+	xkb_layout "us"
+	xkb_options "compose:ralt,caps:backspace"
+}
+
+input "1452:641:Apple_SPI_Trackpad" {
 	tap disabled
 	dwt disabled
 	natural_scroll enabled
-	scroll_factor 0.15
-	xkb_layout "us"
-	xkb_options "compose:ralt,caps:backspace"
+	scroll_factor 0.35
 }
 
 input "1149:8257:Kensington_Slimblade_Trackball" {
@@ -143,7 +146,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl --exponent=2 s 4%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-bindsym XF86Search exec grim -c
+bindsym XF86Search output eDP-1 toggle
 
 gaps inner 5
 gaps outer -5
@@ -166,13 +169,14 @@ bar {
 	mode dock
 	pango_markup on
 	colors {
-		statusline #aaaaaa
+		statusline #ffffff
 		background #000000
 		inactive_workspace #000000 #000000 #aaaaaa
 		active_workspace #000000 #000000 #905090
 		focused_workspace #905090 #905090 #ffffff
 		urgent_workspace #ff0000 #ff0000 #ffffff
 	}
+	tray_output none
 }
 
 include /etc/sway/config.d/*

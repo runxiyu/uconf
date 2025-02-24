@@ -70,8 +70,7 @@ main(int argc, char **argv)
 			return 7;
 		} else if (wl == strlen(argv[1] + 1)) {
 		} else {
-			dprintf(2, "%s: incomplete write to %s\n", argv[0], pglob.gl_pathv[i]);
-			return 8;
+			dprintf(2, "%s: incomplete write to %s, continue...\n", argv[0], pglob.gl_pathv[i]);
 		}
 		if (close(fd) == -1) {
 			dprintf(2, "%s: can't close %s\n", argv[0], pglob.gl_pathv[i]);
