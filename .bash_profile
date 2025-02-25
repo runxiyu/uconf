@@ -22,6 +22,8 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+eval "$(ssh-agent -s)"
+
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi

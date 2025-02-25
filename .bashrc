@@ -2,8 +2,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-eval "$(zoxide init bash)"
-
 function git {
 	if [[ "$1" == "push" && "$@" != *"--help"* ]]; then
 		shift 1
@@ -57,8 +55,10 @@ function uconf {
 
 export GPG_TTY="$(tty)"
 
-source <(fzf --bash)
+# source <(fzf --bash)
 
-PS1="\033[1m\]\w \$\[\033[00m\] "
+PS1="\[\033[1m\]\w \$ \[\033[0m\]"
 PS1="\`(tmp=\$?; if [ \$tmp -ne 0 ]; then printf '\\[\\033[31m\\]%d\\[\\033[0m\\] ' \$tmp; fi; exit \$tmp)\`$PS1"
+
+# eval "$(zoxide init bash)"
 
