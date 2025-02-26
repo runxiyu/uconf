@@ -17,7 +17,7 @@ export GDK_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 
 export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
-export QT_QPA_PLATFORMTHEME=qt6ct
+# export QT_QPA_PLATFORMTHEME=qt6ct
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
