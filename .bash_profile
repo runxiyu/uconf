@@ -16,7 +16,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export GDK_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 
-export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
+# export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
 # export QT_QPA_PLATFORMTHEME=qt6ct
 
 export PATH="$HOME/.local/bin:$PATH"
