@@ -137,8 +137,8 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
-bindsym $mod+Shift+s move scratchpad
-bindsym $mod+s scratchpad show
+# bindsym $mod+Shift+s move scratchpad
+# bindsym $mod+s scratchpad show
 
 bindsym XF86MonBrightnessDown exec brightnessctl --exponent=2 s 4%-
 bindsym XF86MonBrightnessUp exec brightnessctl --exponent=2 s 4%+
@@ -184,4 +184,4 @@ for_window [title="foot-scratchpad"] {
 	move scratchpad
 	resize set 1024 768
 }
-exec foot -T foot-scratchpad sh -c 'while true; do nvim ~/Personal/scratch.txt; sleep 5; done'
+bindsym $mod+s exec foot nvim /home/runxiyu/TODO
