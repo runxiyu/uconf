@@ -1,4 +1,4 @@
-font=B612 10
+font=monospace 11
 format=<b>%s</b>\n%b
 sort=-time
 output=eDP-1
@@ -31,4 +31,4 @@ border-color=#aaaaaa
 text-color=#aaaaaa
 
 [actionable=true]
-format=<b>%s</b>\n%b
+format=<i><b>%s</b></i>\n%b
