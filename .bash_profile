@@ -22,7 +22,10 @@ export SDL_VIDEODRIVER=wayland
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-eval "$(ssh-agent -s)"
+export MANWIDTH=72
+
+[ -z "$TMUX" ] && { eval "$(ssh-agent -s)" && ssh-add; }
+
 
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
