@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 Plug 'https://github.com/tpope/vim-fugitive'
@@ -10,7 +12,8 @@ Plug 'https://github.com/junegunn/vim-easy-align'
 Plug 'https://github.com/ibhagwan/fzf-lua'
 Plug 'https://github.com/hiphish/rainbow-delimiters.nvim'
 Plug 'https://github.com/preservim/nerdtree'
-Plug 'https://github.com/vimwiki/vimwiki'
+Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
+-- Plug 'https://github.com/vimwiki/vimwiki'
 vim.call('plug#end')
 
 vim.opt.shortmess:prepend("IrCFlotTO")
@@ -22,7 +25,7 @@ vim.opt.linebreak  = true
 vim.opt.hidden     = true -- allow background buffers
 vim.opt.laststatus = 2
 vim.opt.showmode   = true -- set false when using airline
-vim.opt.timeoutlen = 50
+vim.opt.timeoutlen = 1000
 vim.opt.mouse      = "a"
 vim.opt.mousemodel = "extend"
 vim.opt.clipboard  = "unnamedplus"
@@ -65,18 +68,18 @@ require'nvim-treesitter.configs'.setup {
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 require'lspconfig'.clangd.setup{}
-require'lspconfig'.pylsp.setup{
-	settings = {
-		pylsp = {
-			plugins = {
-				pycodestyle = {
-					ignore = {'W391'},
-					maxLineLength = 100
-				}
-			}
-		}
-	}
-}
+-- require'lspconfig'.pylsp.setup{
+-- 	settings = {
+-- 		pylsp = {
+-- 			plugins = {
+-- 				pycodestyle = {
+-- 					ignore = {'W391'},
+-- 					maxLineLength = 100
+-- 				}
+-- 			}
+-- 		}
+-- 	}
+-- }
 require'lspconfig'.gopls.setup{}
 -- require'lspconfig'.eslint.setup{}
 
@@ -85,3 +88,7 @@ require'nvim-lastplace'.setup {
 	lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
 	lastplace_open_folds = true
 }
+
+vim.opt.smartindent = false
+
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)

@@ -7,9 +7,13 @@ export INPUTRC="$XDG_CONFIG_HOME/inputrc"
 export EDITOR="nvim"
 
 export GOPROXY=direct
+export GOSUMDB=off
 export GOPATH="$XDG_DATA_HOME/go"
 export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export PATH="$GOPATH/bin:$PATH"
+
+export LANG="C.UTF-8"
+export LC_ALL="C.UTF-8"
 
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
@@ -23,6 +27,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 export MANWIDTH=72
+
+export HAREFLAGS="-lc $HAREFLAGS"
 
 [ -z "$TMUX" ] && { eval "$(ssh-agent -s)" && ssh-add; }
 

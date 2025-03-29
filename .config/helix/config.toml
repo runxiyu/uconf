@@ -1,4 +1,4 @@
-theme = "autumn_night"
+theme = "flat_dark"
 
 [editor.soft-wrap]
 enable = true
@@ -8,3 +8,7 @@ enable = true
 normal = "block"
 insert = "bar"
 select = "underline"
+
+[keys.normal]
+"ret" = "goto_word"
+

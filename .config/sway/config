@@ -8,11 +8,11 @@ set $down j
 set $up k
 set $right l
 
-set $term foot
+set $term footclient
 set $emacs emacsclient -c
 set $menu fuzzel
 set $browser firefox
-set $filemanager foot lf
+set $filemanager footclient lf
 
 output eDP-1 {
 	resolution 2560x1600
@@ -40,7 +40,9 @@ bindsym $mod+shift+Escape exec 'swaylock -F -f -c ff0000 -i /dev/null'
 exec mako
 exec /usr/libexec/xdg-desktop-portal-wlr
 exec dbus-update-activation-environment --all
-exec emacs --daemon
+# exec emacs --daemon
+
+exec foot -s
 
 input "1:1:AT_Translated_Set_2_keyboard" {
 	xkb_layout "gbcustom"
@@ -163,7 +165,7 @@ client.urgent            #2f343a #ff0000 #ffffff #ff0000 #ff0000
 client.placeholder       #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
 bar {
-	font system-ui 10
+	font sans-serif 10
 	position top
 	status_command ~/.local/bin/rxbar
 	mode dock
@@ -181,8 +183,8 @@ bar {
 
 include /etc/sway/config.d/*
 
-for_window [title="foot-scratchpad"] {
-	move scratchpad
+for_window [title="foot-floating"] {
 	resize set 1024 768
 }
-bindsym $mod+s exec foot nvim /home/runxiyu/TODO
+
+bindsym $mod+s exec footclient -T foot-floating nvim /home/runxiyu/TODO

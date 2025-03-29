@@ -62,3 +62,6 @@ PS1="\`(tmp=\$?; if [ \$tmp -ne 0 ]; then printf '\\[\\033[31m\\]%d\\[\\033[0m\\
 
 eval "$(zoxide init bash)"
 
+. "/home/runxiyu/.acme.sh/acme.sh.env"
+
+alias ls="ls --color=auto --group-directories-first"
