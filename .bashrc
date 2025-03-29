@@ -62,6 +62,10 @@ PS1="\`(tmp=\$?; if [ \$tmp -ne 0 ]; then printf '\\[\\033[31m\\]%d\\[\\033[0m\\
 
 eval "$(zoxide init bash)"
 
-. "/home/runxiyu/.acme.sh/acme.sh.env"
+# . "/home/runxiyu/.acme.sh/acme.sh.env"
 
-alias ls="ls --color=auto --group-directories-first"
+if [ x"$(uname)" = x"Linux" ]; then
+	alias ls="ls --color=auto --group-directories-first"
+elif [ x"$(uname)" = x"FreeBSD" ]; then
+	alias ls="ls --color=auto"
+fi
