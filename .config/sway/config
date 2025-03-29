@@ -29,6 +29,7 @@ output * {
 	bg #000000 solid_color
 }
 
+exec kanshi
 exec swayidle -w \
          timeout 350 'swaylock -F -f -c 000000 -i /dev/null' \
          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
