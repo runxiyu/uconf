@@ -57,7 +57,7 @@ export GPG_TTY="$(tty)"
 
 source <(fzf --bash)
 
-PS1="\[\033[1m\]\w \$ \[\033[0m\]"
+PS1='\[\033[1m\]\w $(parse_git_branch)\$ \[\033[0m\]'
 PS1="\`(tmp=\$?; if [ \$tmp -ne 0 ]; then printf '\\[\\033[31m\\]%d\\[\\033[0m\\] ' \$tmp; fi; exit \$tmp)\`$PS1"
 
 eval "$(zoxide init bash)"
@@ -69,3 +69,15 @@ if [ x"$(uname)" = x"Linux" ]; then
 elif [ x"$(uname)" = x"FreeBSD" ]; then
 	alias ls="ls --color=auto"
 fi
+
+parse_git_branch() {
+	if git rev-parse --git-dir > /dev/null 2>&1; then
+		branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+		dirty=""
+		if ! git diff --quiet --ignore-submodules --cached || ! git diff --quiet --ignore-submodules || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+			dirty="*"
+		fi
+		echo "($branch$dirty) "
+	fi
+}
+
