@@ -31,3 +31,6 @@
 
 [advice]
 	detachedHead = false
+[merge]
+	commit = no
+	ff = no

@@ -14,6 +14,7 @@ Plug 'https://github.com/hiphish/rainbow-delimiters.nvim'
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
 -- Plug 'https://github.com/vimwiki/vimwiki'
+-- Plug 'https://github.com/github/copilot.vim'
 vim.call('plug#end')
 
 vim.opt.shortmess:prepend("IrCFlotTO")

@@ -188,3 +188,8 @@ for_window [title="foot-floating"] {
 }
 
 bindsym $mod+s exec footclient -T foot-floating nvim /home/runxiyu/TODO
+
+bindsym $mod+i exec grim
+
+exec pamixer -m
+exec pamixer --set-volume 0
